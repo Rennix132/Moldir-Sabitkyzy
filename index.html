@@ -54,13 +54,13 @@
 
   a{color:inherit;text-decoration:none;}
 
-  /* visible focus */
+  /* ---------- visible focus ---------- */
   a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{
     outline:2px solid var(--ink);
     outline-offset:3px;
   }
 
-  /* NAV */
+  /* ---------- NAV ---------- */
   header{
     position:fixed;top:0;left:0;right:0;
     z-index:200;
@@ -82,7 +82,7 @@
   }
   .nav-logo img{height:34px;width:auto;}
   .nav-links{
-    display:flex;gap:36px;
+    display:flex;gap:32px;align-items:center;
     font-size:13px;letter-spacing:0.04em;text-transform:uppercase;font-weight:600;
   }
   .nav-links a{position:relative;padding-bottom:4px;}
@@ -92,7 +92,7 @@
   }
   .nav-links a:hover::after{width:100%;}
   .nav-cta{
-    display:flex;align-items:center;gap:18px;
+    display:flex;align-items:center;gap:16px;
   }
   .btn-wa{
     display:inline-flex;align-items:center;gap:8px;
@@ -108,10 +108,28 @@
   .btn-wa:active{transform:scale(0.97);}
   .btn-wa svg{width:15px;height:15px;flex-shrink:0;}
 
+  /* ---------- LANG SWITCH ---------- */
+  .lang-switch{
+    display:flex;align-items:center;
+    border:1px solid var(--ink);
+    border-radius:999px;
+    padding:3px;
+    flex-shrink:0;
+  }
+  .lang-btn{
+    background:none;border:none;cursor:pointer;
+    font-size:11.5px;font-weight:700;letter-spacing:0.04em;
+    padding:6px 12px;border-radius:999px;
+    color:var(--ink);
+    transition:background .2s ease,color .2s ease;
+    font-family:'Manrope',sans-serif;
+  }
+  .lang-btn.active{background:var(--ink);color:var(--paper);}
+
   .burger{display:none;background:none;border:none;cursor:pointer;padding:6px;}
   .burger span{display:block;width:24px;height:1.5px;background:var(--ink);margin:5px 0;transition:.3s;}
 
-  /* HERO */
+  /* ---------- HERO ---------- */
   .hero{
     position:relative;
     padding:170px 0 110px;
@@ -207,10 +225,10 @@
     text-transform:uppercase;font-weight:600;
   }
   .lens-tick.t1{top:-6px;left:50%;transform:translate(-50%,-100%);}
-  .lens-tick.t2{bottom:-6px;left:50%;transform:translate(-50%,100%);font-size:10px;color:var(--stone-light);}
+  .lens-tick.t2{bottom:-6px;left:50%;transform:translate(-50%,100%);font-size:10px;color:var(--stone-light);white-space:nowrap;}
   .lens-tick.t3{right:-14px;top:50%;transform:translate(100%,-50%) rotate(90deg);transform-origin:left center;}
 
-  /* SECTION shared */
+  /* ---------- SECTION shared ---------- */
   section{padding:108px 0;}
   .section-head{
     display:flex;justify-content:space-between;align-items:flex-end;
@@ -227,7 +245,7 @@
     letter-spacing:0.05em;
   }
 
-  /* PAIN POINTS */
+  /* ---------- PAIN POINTS ---------- */
   .pains{background:var(--ink);color:var(--paper);}
   .pains .eyebrow{color:var(--stone-light);}
   .pain-list{
@@ -248,7 +266,7 @@
   }
   .pain-text{font-size:17px;line-height:1.6;color:#f1efe9;}
 
-  /* ABOUT / APPROACH */
+  /* ---------- ABOUT / APPROACH ---------- */
   .about-grid{
     display:grid;grid-template-columns:0.85fr 1.15fr;gap:70px;
   }
@@ -283,56 +301,84 @@
   }
   .stat-label{font-size:13.5px;color:var(--stone);line-height:1.5;}
 
-  /* TOOLS / PRODUCTS */
-  .tools{background:var(--paper-2);}
-  .tools-intro{max-width:560px;margin-bottom:60px;}
-  .tools-intro p{font-size:16px;line-height:1.7;color:#454440;margin-top:18px;}
-  .brand-row{
-    display:flex;gap:14px;margin-top:28px;flex-wrap:wrap;
-  }
-  .brand-pill{
-    border:1px solid var(--ink);
-    padding:8px 18px;
-    font-size:12.5px;letter-spacing:0.06em;text-transform:uppercase;font-weight:700;
-    border-radius:999px;
-  }
-  .tool-cards{
-    display:grid;grid-template-columns:repeat(3,1fr);gap:1px;
-    background:var(--line);
-    border:1px solid var(--line);
-  }
-  .tool-card{
-    background:var(--paper);
-    padding:42px 34px;
-  }
-  .tool-card .eyebrow{display:block;margin-bottom:18px;}
-  .tool-card h3{font-size:21px;font-weight:500;margin-bottom:14px;line-height:1.25;}
-  .tool-card p{font-size:14.5px;line-height:1.7;color:#5c5a55;}
-
-  /* PRICE */
+  /* ---------- PRICE ---------- */
   .price-table{border-top:1px solid var(--line);}
   .price-row{
     display:grid;grid-template-columns:auto 1fr auto auto;
-    align-items:center;gap:28px;
+    align-items:flex-start;gap:28px;
     padding:30px 0;
     border-bottom:1px solid var(--line);
   }
   .price-row .pidx{
     font-family:'Cormorant Garamond',serif;font-size:15px;color:var(--stone-light);
+    padding-top:4px;
   }
-  .price-name h3{font-size:22px;font-weight:500;margin-bottom:6px;}
-  .price-name p{font-size:14px;color:var(--stone);line-height:1.6;max-width:480px;}
-  .price-time{font-size:13px;color:var(--stone);letter-spacing:0.03em;white-space:nowrap;}
+  .price-name h3{font-size:22px;font-weight:500;margin-bottom:8px;}
+  .price-name .price-desc{font-size:14px;color:#5c5a55;line-height:1.65;max-width:520px;}
+  .price-name .price-desc .emoji{margin-right:2px;}
+  .price-time{font-size:13px;color:var(--stone);letter-spacing:0.03em;white-space:nowrap;padding-top:4px;}
   .price-amount{
     font-family:'Cormorant Garamond',serif;
-    font-size:26px;font-weight:500;white-space:nowrap;
+    font-size:26px;font-weight:500;white-space:nowrap;padding-top:2px;
   }
   .price-note{
     margin-top:34px;font-size:13.5px;color:var(--stone);
     display:flex;align-items:center;gap:10px;
   }
 
-  /* QUIZ CTA BAND */
+  /* ---------- PHOTOTHERAPY CALLOUT ---------- */
+  .photo-callout{
+    margin-top:54px;
+    background:var(--paper-2);
+    border-radius:6px;
+    padding:38px 40px;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:40px;
+  }
+  .photo-callout h3{font-size:22px;font-weight:500;margin-bottom:12px;display:flex;align-items:center;gap:10px;}
+  .photo-callout p{font-size:14.5px;line-height:1.7;color:#454440;}
+  .photo-checks{list-style:none;display:flex;flex-direction:column;gap:10px;}
+  .photo-checks li{
+    font-size:14px;line-height:1.5;color:#3a3936;
+    display:flex;align-items:flex-start;gap:10px;
+  }
+  .photo-checks li::before{
+    content:"✓";flex-shrink:0;
+    width:18px;height:18px;border-radius:50%;background:var(--ink);color:var(--paper);
+    font-size:10px;display:flex;align-items:center;justify-content:center;margin-top:2px;
+  }
+
+  /* ---------- REVIEWS ---------- */
+  .reviews{background:var(--paper-2);}
+  .reviews-head{margin-bottom:50px;max-width:600px;}
+  .reviews-head p{font-size:15.5px;line-height:1.7;color:#454440;margin-top:14px;}
+  .review-strip{
+    display:flex;gap:22px;
+    overflow-x:auto;
+    padding-bottom:14px;
+    scroll-snap-type:x proximity;
+    -webkit-overflow-scrolling:touch;
+  }
+  .review-strip::-webkit-scrollbar{height:5px;}
+  .review-strip::-webkit-scrollbar-thumb{background:var(--stone-light);border-radius:10px;}
+  .review-card{
+    flex:0 0 auto;
+    width:270px;
+    scroll-snap-align:start;
+    background:var(--white);
+    border-radius:8px;
+    overflow:hidden;
+    border:1px solid var(--line);
+    box-shadow:0 6px 18px rgba(10,10,10,0.05);
+  }
+  .review-card img{width:100%;height:auto;display:block;}
+  .review-hint{
+    text-align:center;margin-top:18px;font-size:12.5px;color:var(--stone);
+    letter-spacing:0.03em;
+  }
+
+  /* ---------- QUIZ CTA BAND ---------- */
   .quiz-band{
     background:var(--ink);color:var(--paper);
     padding:90px 0;
@@ -362,7 +408,7 @@
   .btn-light:hover{background:transparent;color:var(--paper);}
   .btn-light:active{transform:scale(0.97);}
 
-  /* FAQ */
+  /* ---------- FAQ ---------- */
   .faq-list{border-top:1px solid var(--line);}
   .faq-item{border-bottom:1px solid var(--line);}
   .faq-q{
@@ -389,7 +435,7 @@
     padding-bottom:30px;font-size:15px;line-height:1.75;color:#454440;max-width:680px;
   }
 
-  /* FOOTER */
+  /* ---------- FOOTER ---------- */
   footer{background:var(--ink);color:var(--paper);padding:80px 0 36px;}
   .footer-grid{
     display:grid;grid-template-columns:1fr 1fr 1fr;gap:40px;
@@ -411,7 +457,7 @@
     font-size:12.5px;color:var(--stone);
   }
 
-  /* FLOATING WA */
+  /* ---------- FLOATING WA ---------- */
   .float-wa{
     position:fixed;bottom:26px;right:26px;z-index:150;
     width:58px;height:58px;border-radius:50%;
@@ -423,7 +469,7 @@
   .float-wa:hover{transform:scale(1.08);}
   .float-wa svg{width:26px;height:26px;}
 
-  /* QUIZ MODAL */
+  /* ---------- QUIZ MODAL ---------- */
   .quiz-overlay{
     position:fixed;inset:0;z-index:500;
     background:rgba(10,10,10,0.55);
@@ -554,7 +600,7 @@
   }
   .quiz-final-icon svg{width:24px;height:24px;}
 
-  /* RESPONSIVE */
+  /* ---------- RESPONSIVE ---------- */
   @media (max-width:980px){
     .nav-links{display:none;}
     .burger{display:block;}
@@ -563,7 +609,6 @@
     .hero{padding:140px 0 70px;}
     .about-grid{grid-template-columns:1fr;}
     .stat-block{position:static;}
-    .tool-cards{grid-template-columns:1fr;}
     .pain-list{grid-template-columns:1fr;}
     .pain-item:nth-child(odd){border-right:none;padding-right:0;}
     .pain-item:nth-child(even){padding-left:0;}
@@ -571,6 +616,7 @@
     .footer-grid{grid-template-columns:1fr;gap:36px;}
     .price-row{grid-template-columns:1fr;gap:8px;}
     .price-amount{font-size:22px;}
+    .photo-callout{grid-template-columns:1fr;}
   }
   @media (max-width:560px){
     .wrap{padding:0 20px;}
@@ -581,6 +627,9 @@
     .quiz-modal{max-height:92vh;}
     .quiz-body{padding:22px 20px 26px;}
     .quiz-top{padding:20px 20px 0;}
+    .nav-cta{gap:10px;}
+    .btn-wa span.btn-wa-text{display:none;}
+    .btn-wa{padding:11px 14px;}
   }
 
   @media (prefers-reduced-motion: reduce){
@@ -591,22 +640,26 @@
 </head>
 <body>
 
-<!-- HEADER -->
+<!-- ============ HEADER ============ -->
 <header id="siteHeader">
   <div class="nav">
     <a href="#top" class="nav-logo">
       <img src="assets/logo-black.png" alt="Moldir Sabitkyzy">
     </a>
     <nav class="nav-links">
-      <a href="#about">Обо мне</a>
-      <a href="#tools">Продукция</a>
-      <a href="#price">Услуги</a>
-      <a href="#faq">Вопросы</a>
+      <a href="#about" data-i18n="nav_about">Обо мне</a>
+      <a href="#price" data-i18n="nav_price">Услуги</a>
+      <a href="#reviews" data-i18n="nav_reviews">Отзывы</a>
+      <a href="#faq" data-i18n="nav_faq">Вопросы</a>
     </nav>
     <div class="nav-cta">
+      <div class="lang-switch" id="langSwitch">
+        <button class="lang-btn active" data-lang="ru">RU</button>
+        <button class="lang-btn" data-lang="kk">KZ</button>
+      </div>
       <a class="btn-wa" href="https://wa.me/87059708866" target="_blank" rel="noopener">
         <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.2h.01c5.46 0 9.91-4.45 9.91-9.91C21.96 6.45 17.5 2 12.04 2zm5.84 14.13c-.25.7-1.24 1.29-2.03 1.46-.54.11-1.24.2-3.6-.77-3.02-1.25-4.96-4.31-5.11-4.51-.15-.2-1.22-1.62-1.22-3.09 0-1.47.77-2.19 1.04-2.49.27-.3.6-.37.8-.37.2 0 .4 0 .57.01.18.01.43-.07.67.51.25.6.85 2.08.92 2.23.07.15.12.33.02.53-.1.2-.15.32-.3.49-.15.17-.31.38-.45.51-.15.15-.3.31-.13.61.17.3.77 1.27 1.65 2.06 1.14 1.02 2.1 1.33 2.4 1.48.3.15.48.13.65-.08.18-.2.75-.87.95-1.17.2-.3.4-.25.67-.15.27.1 1.74.82 2.04.97.3.15.5.22.57.35.07.13.07.74-.18 1.44z"/></svg>
-        WhatsApp
+        <span class="btn-wa-text">WhatsApp</span>
       </a>
       <button class="burger" id="burgerBtn" aria-label="Меню">
         <span></span><span></span><span></span>
@@ -617,22 +670,21 @@
 
 <a id="top"></a>
 
-<!-- HERO -->
+<!-- ============ HERO ============ -->
 <section class="hero">
   <div class="wrap hero-grid">
     <div>
       <div class="hero-eyebrow">
         <span class="dot"></span>
-        <span class="eyebrow">Эстетическая трихология · Алматы</span>
+        <span class="eyebrow" data-i18n="hero_eyebrow">Эстетическая трихология · Актау</span>
       </div>
-      <h1 class="hero-title">Ваш мастер по<br><em>реконструкции</em> волос</h1>
-      <div class="hero-sub">Трихолог-эстетист</div>
-      <p class="hero-desc">Моя цель — вернуть вашей коже головы комфорт, а волосам густоту, силу, блеск и красоту.</p>
+      <div class="hero-sub" data-i18n="hero_sub">Трихолог-эстетист</div>
+      <p class="hero-desc" data-i18n="hero_desc">Моя цель — вернуть вашей коже головы комфорт, а волосам густоту, силу, блеск и красоту.</p>
       <div class="hero-actions">
-        <button class="btn-primary" onclick="openQuiz()">
+        <button class="btn-primary" onclick="openQuiz()" data-i18n="hero_cta">
           Записаться на диагностику
         </button>
-        <a class="btn-ghost" href="#price">Смотреть цены</a>
+        <a class="btn-ghost" href="#price" data-i18n="hero_cta_secondary">Смотреть цены</a>
       </div>
     </div>
     <div class="hero-visual">
@@ -643,213 +695,232 @@
         <div class="lens-inner">
           <img src="assets/logo-black.png" alt="">
         </div>
-        <span class="lens-tick t2">диагностика кожи головы</span>
+        <span class="lens-tick t2" data-i18n="hero_lens_label">диагностика кожи головы</span>
       </div>
     </div>
   </div>
 </section>
 
-<!-- PAIN POINTS -->
+<!-- ============ PAIN POINTS ============ -->
 <section class="pains" id="pains">
   <div class="wrap">
     <div class="section-head">
-      <h2>Я помогу разобраться в причинах и&nbsp;подберу уход, если вас беспокоят:</h2>
+      <h2 data-i18n="pains_title">Я помогу разобраться в причинах и&nbsp;подберу уход, если вас беспокоят:</h2>
     </div>
     <div class="pain-list">
       <div class="pain-item">
         <span class="pain-num">01</span>
-        <span class="pain-text">Зуд, шелушение, перхоть, сухость или избыточная жирность кожи головы</span>
+        <span class="pain-text" data-i18n="pain_1">Зуд, шелушение, перхоть, сухость или избыточная жирность кожи головы</span>
       </div>
       <div class="pain-item">
         <span class="pain-num">02</span>
-        <span class="pain-text">Чувство стянутости и обезвоженности кожи, болезненность у корней</span>
+        <span class="pain-text" data-i18n="pain_2">Чувство стянутости и обезвоженности кожи, болезненность у корней</span>
       </div>
       <div class="pain-item">
         <span class="pain-num">03</span>
-        <span class="pain-text">Выпадение волос после стресса, болезни или приёма препаратов</span>
+        <span class="pain-text" data-i18n="pain_3">Выпадение волос после стресса, болезни или приёма препаратов</span>
       </div>
       <div class="pain-item">
         <span class="pain-num">04</span>
-        <span class="pain-text">Потеря густоты, объёма и качества волос</span>
+        <span class="pain-text" data-i18n="pain_4">Потеря густоты, объёма и качества волос</span>
       </div>
       <div class="pain-item">
         <span class="pain-num">05</span>
-        <span class="pain-text">Ломкость, сечение и невозможность отрастить длину</span>
+        <span class="pain-text" data-i18n="pain_5">Ломкость, сечение и невозможность отрастить длину</span>
       </div>
       <div class="pain-item">
         <span class="pain-num">06</span>
-        <span class="pain-text">Не понимаете, с чем именно связана проблема, и хотите точный диагноз</span>
+        <span class="pain-text" data-i18n="pain_6">Не понимаете, с чем именно связана проблема, и хотите точный диагноз</span>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ABOUT -->
+<!-- ============ ABOUT ============ -->
 <section id="about">
   <div class="wrap">
     <div class="section-head">
-      <h2>Мои компетенции<br>и принципы работы</h2>
-      <span class="section-num">Обо мне</span>
+      <h2 data-i18n="about_title">Мои компетенции<br>и принципы работы</h2>
+      <span class="section-num" data-i18n="about_eyebrow">Обо мне</span>
     </div>
     <div class="about-grid">
       <div>
         <div class="about-card">
-          <h3>Опыт и насмотренность</h3>
-          <p>Практический опыт 6,5 лет, непрерывное обучение и свыше 5000 проведённых трихоскопий.</p>
+          <h3 data-i18n="about_1_title">Опыт и насмотренность</h3>
+          <p data-i18n="about_1_text">Практический опыт 6,5 лет, непрерывное обучение и свыше 5000 проведённых трихоскопий.</p>
         </div>
         <div class="about-card">
-          <h3>Без агрессивного вмешательства</h3>
-          <p>Работаю исключительно с помощью косметики и космецевтики — чистая органика, без лекарственных средств, гормональных препаратов и инъекций.</p>
+          <h3 data-i18n="about_2_title">Без агрессивного вмешательства</h3>
+          <p data-i18n="about_2_text">Работаю исключительно с помощью косметики и космецевтики — чистая органика, без лекарственных средств, гормональных препаратов и инъекций.</p>
         </div>
         <div class="about-card">
-          <h3>Профессиональная ответственность</h3>
-          <p>Не ставлю диагнозы и не назначаю медикаменты. Если ситуация (рубцовая алопеция, инфекции, грибок) требует медицинского лечения — своевременно перенаправлю к врачу-дерматологу. Моя задача — помочь там, где работают инструменты эстетической трихологии.</p>
+          <h3 data-i18n="about_3_title">Профессиональная ответственность</h3>
+          <p data-i18n="about_3_text">Не ставлю диагнозы и не назначаю медикаменты. Если ситуация (рубцовая алопеция, инфекции, грибок) требует медицинского лечения — своевременно перенаправлю к врачу-дерматологу. Моя задача — помочь там, где работают инструменты эстетической трихологии.</p>
         </div>
       </div>
       <div class="stat-block">
         <div class="stat-row">
           <span class="stat-num">6,5</span>
-          <span class="stat-label">лет практического опыта в&nbsp;трихологии</span>
+          <span class="stat-label" data-i18n="stat_1">лет практического опыта в&nbsp;трихологии</span>
         </div>
         <div class="stat-row">
           <span class="stat-num">5000+</span>
-          <span class="stat-label">проведённых трихоскопий</span>
+          <span class="stat-label" data-i18n="stat_2">проведённых трихоскопий</span>
         </div>
         <div class="stat-row">
           <span class="stat-num">0</span>
-          <span class="stat-label">гормонов и&nbsp;медикаментов в&nbsp;уходе</span>
+          <span class="stat-label" data-i18n="stat_3">гормонов и&nbsp;медикаментов в&nbsp;уходе</span>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- TOOLS / PRODUCTS -->
-<section class="tools" id="tools">
-  <div class="wrap">
-    <div class="tools-intro">
-      <span class="eyebrow">Продукция</span>
-      <h2 style="margin-top:14px;">Инвестиция в здоровье волос</h2>
-      <p>В работе я использую профессиональные космецевтические линейки <strong>Ecotriatria</strong> и <strong>Tormesis</strong>.</p>
-      <div class="brand-row">
-        <span class="brand-pill">Ecotriatria</span>
-        <span class="brand-pill">Tormesis</span>
-      </div>
-    </div>
-    <div class="tool-cards">
-      <div class="tool-card">
-        <span class="eyebrow">Происхождение</span>
-        <h3>Созданы наукой, а не маркетингом</h3>
-        <p>Формулы разработаны врачами-трихологами с 30-летним клиническим опытом.</p>
-      </div>
-      <div class="tool-card">
-        <span class="eyebrow">Действие</span>
-        <h3>Решают первопричину</h3>
-        <p>Средства не просто маскируют симптомы, а восстанавливают гидролипидный барьер, нормализуют pH и микробиом кожи. Здоровая кожа головы — единственная база для крепких волос.</p>
-      </div>
-      <div class="tool-card">
-        <span class="eyebrow">Состав</span>
-        <h3>Бережная эффективность</h3>
-        <p>Высокая концентрация активов даёт результат быстрее масс-маркета. Составы не содержат спирта и раздражителей, подходят даже самой реактивной коже в условиях хронического стресса.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- PRICE -->
+<!-- ============ PRICE ============ -->
 <section id="price">
   <div class="wrap">
     <div class="section-head">
-      <h2>Услуги и стоимость</h2>
-      <span class="section-num">Прайс-лист</span>
+      <h2 data-i18n="price_title">Услуги и стоимость</h2>
+      <span class="section-num" data-i18n="price_eyebrow">Прайс-лист</span>
     </div>
     <div class="price-table">
+
       <div class="price-row">
         <span class="pidx">01</span>
         <div class="price-name">
-          <h3>Диагностика под трихоскопом + консультация</h3>
+          <h3 data-i18n="price_1_name">Диагностика под трихоскопом + консультация</h3>
+          <p class="price-desc" data-i18n="price_1_desc"><span class="emoji">🔍</span>Трихоскопия — диагностика состояния кожи головы и волос с помощью специального оборудования.</p>
         </div>
         <span class="price-time">—</span>
         <span class="price-amount">5 000 ₸</span>
       </div>
+
       <div class="price-row">
         <span class="pidx">02</span>
         <div class="price-name">
-          <h3>Лазерный шлем</h3>
+          <h3 data-i18n="price_2_name">Лазерный шлем</h3>
+          <p class="price-desc" data-i18n="price_2_desc"><span class="emoji">🔴</span>Воздействует низкоинтенсивным лазером на кожу головы, стимулируя волосяные фолликулы.</p>
         </div>
-        <span class="price-time">20 минут</span>
+        <span class="price-time" data-i18n="price_2_time">20 минут</span>
         <span class="price-amount">10 000 ₸</span>
       </div>
+
       <div class="price-row">
         <span class="pidx">03</span>
         <div class="price-name">
-          <h3>Озонотерапия</h3>
+          <h3 data-i18n="price_3_name">Массажный шлем</h3>
+          <p class="price-desc" data-i18n="price_3_desc"><span class="emoji">💆‍♀️</span>Улучшает кровообращение кожи головы, расслабляет и усиливает действие уходовых процедур.</p>
         </div>
-        <span class="price-time">40 минут</span>
-        <span class="price-amount">15 000 ₸</span>
+        <span class="price-time" data-i18n="price_3_time">15 минут</span>
+        <span class="price-amount">12 000 ₸</span>
       </div>
+
       <div class="price-row">
         <span class="pidx">04</span>
         <div class="price-name">
-          <h3>Трихологический пилинг</h3>
-          <p>Система из 3 шагов: пилинг / эмульсия / маска. Однократно — для профилактики, курсом — при наличии патологии.</p>
+          <h3 data-i18n="price_4_name">Озонотерапия</h3>
+          <p class="price-desc" data-i18n="price_4_desc"><span class="emoji">💨</span>Улучшает микроциркуляцию кожи головы и создаёт благоприятные условия для здоровья волос.</p>
         </div>
-        <span class="price-time">1 час</span>
+        <span class="price-time" data-i18n="price_4_time">40 минут</span>
+        <span class="price-amount">15 000 ₸</span>
+      </div>
+
+      <div class="price-row">
+        <span class="pidx">05</span>
+        <div class="price-name">
+          <h3 data-i18n="price_5_name">Фототерапия</h3>
+          <p class="price-desc" data-i18n="price_5_desc"><span class="emoji">💡</span>Воздействие световыми волнами на кожу головы при псориазе — снимает воспаление, зуд и шелушение.</p>
+        </div>
+        <span class="price-time">—</span>
+        <span class="price-amount">8 000 ₸</span>
+      </div>
+
+      <div class="price-row">
+        <span class="pidx">06</span>
+        <div class="price-name">
+          <h3 data-i18n="price_6_name">Трихологический пилинг</h3>
+          <p class="price-desc" data-i18n="price_6_desc">Система из 3 шагов: пилинг / эмульсия / маска. Однократно — для профилактики, курсом — при наличии патологии.</p>
+        </div>
+        <span class="price-time" data-i18n="price_6_time">1 час</span>
         <span class="price-amount">20 000 ₸</span>
       </div>
+
     </div>
-    <p class="price-note">Точную программу и количество процедур определяем после диагностики под трихоскопом.</p>
+    <p class="price-note" data-i18n="price_note">Точную программу и количество процедур определяем после диагностики под трихоскопом.</p>
   </div>
 </section>
 
-<!-- QUIZ BAND -->
+<!-- ============ REVIEWS ============ -->
+<section class="reviews" id="reviews">
+  <div class="wrap">
+    <div class="reviews-head">
+      <span class="eyebrow" data-i18n="reviews_eyebrow">Отзывы клиентов</span>
+      <h2 style="margin-top:14px;" data-i18n="reviews_title">Что говорят те, кто уже прошёл курс</h2>
+      <p data-i18n="reviews_text">Реальная переписка с клиентами — до и после ухода.</p>
+    </div>
+    <div class="review-strip">
+      <div class="review-card"><img src="assets/reviews/review-1.png" alt="Отзыв клиента" loading="lazy"></div>
+      <div class="review-card"><img src="assets/reviews/review-2.png" alt="Отзыв клиента" loading="lazy"></div>
+      <div class="review-card"><img src="assets/reviews/review-3.png" alt="Отзыв клиента" loading="lazy"></div>
+      <div class="review-card"><img src="assets/reviews/review-4.png" alt="Отзыв клиента" loading="lazy"></div>
+      <div class="review-card"><img src="assets/reviews/review-5.png" alt="Отзыв клиента" loading="lazy"></div>
+      <div class="review-card"><img src="assets/reviews/review-6.png" alt="Отзыв клиента" loading="lazy"></div>
+      <div class="review-card"><img src="assets/reviews/review-7.png" alt="Отзыв клиента" loading="lazy"></div>
+      <div class="review-card"><img src="assets/reviews/review-8.png" alt="Отзыв клиента" loading="lazy"></div>
+      <div class="review-card"><img src="assets/reviews/review-9.png" alt="Отзыв клиента" loading="lazy"></div>
+    </div>
+    <p class="review-hint" data-i18n="reviews_hint">← Листайте, чтобы посмотреть все отзывы →</p>
+  </div>
+</section>
+
+<!-- ============ QUIZ BAND ============ -->
 <section class="quiz-band">
   <div class="wrap quiz-band-grid">
     <div>
-      <span class="eyebrow" style="color:var(--stone-light)">Бесплатно · 2 минуты</span>
-      <h2 style="margin-top:14px;">Пройдите короткую анкету —<br>и получите рекомендацию лично от меня</h2>
-      <p>Отвечу на ваши ответы в WhatsApp и предложу подходящий формат диагностики и ухода.</p>
+      <span class="eyebrow" style="color:var(--stone-light)" data-i18n="quizband_eyebrow">Бесплатно · 2 минуты</span>
+      <h2 style="margin-top:14px;" data-i18n="quizband_title">Пройдите короткую анкету —<br>и получите рекомендацию лично от меня</h2>
+      <p data-i18n="quizband_text">Отвечу на ваши ответы в WhatsApp и предложу подходящий формат диагностики и ухода.</p>
     </div>
-    <button class="btn-light" onclick="openQuiz()">
+    <button class="btn-light" onclick="openQuiz()" data-i18n="quizband_cta">
       Пройти анкету
     </button>
   </div>
 </section>
 
-<!-- FAQ -->
+<!-- ============ FAQ ============ -->
 <section id="faq">
   <div class="wrap">
     <div class="section-head">
-      <h2>Частые вопросы</h2>
-      <span class="section-num">Важно знать</span>
+      <h2 data-i18n="faq_title">Частые вопросы</h2>
+      <span class="section-num" data-i18n="faq_eyebrow">Важно знать</span>
     </div>
     <div class="faq-list">
       <div class="faq-item">
         <button class="faq-q">
-          <h3>Даёте ли вы 100% гарантию, что волосы вырастут?</h3>
+          <h3 data-i18n="faq_1_q">Даёте ли вы 100% гарантию, что волосы вырастут?</h3>
           <span class="faq-icon"></span>
         </button>
-        <div class="faq-a"><div class="faq-a-inner">Ни один адекватный специалист не даст таких обещаний. Объём восстановленных волос зависит от того, как скоро вы обратились. Но загустить их так, чтобы это было визуально незаметно — можно.</div></div>
+        <div class="faq-a"><div class="faq-a-inner" data-i18n="faq_1_a">Ни один адекватный специалист не даст таких обещаний. Объём восстановленных волос зависит от того, как скоро вы обратились. Но загустить их так, чтобы это было визуально незаметно — можно.</div></div>
       </div>
       <div class="faq-item">
         <button class="faq-q">
-          <h3>Как быстро будет виден результат?</h3>
+          <h3 data-i18n="faq_2_q">Как быстро будет виден результат?</h3>
           <span class="faq-icon"></span>
         </button>
-        <div class="faq-a"><div class="faq-a-inner">Первые улучшения (снижение выпадения, уход зуда и дискомфорта) вы увидите уже через месяц — это гарантировано. Окончательные результаты индивидуальны: у кого-то уйдёт месяц, у кого-то полгода или год. Мы не используем гормоны, поэтому требуется время и ваше терпение.</div></div>
+        <div class="faq-a"><div class="faq-a-inner" data-i18n="faq_2_a">Первые улучшения (снижение выпадения, уход зуда и дискомфорта) вы увидите уже через месяц — это гарантировано. Окончательные результаты индивидуальны: у кого-то уйдёт месяц, у кого-то полгода или год. Мы не используем гормоны, поэтому требуется время и ваше терпение.</div></div>
       </div>
       <div class="faq-item">
         <button class="faq-q">
-          <h3>Можно ли остановить АГА (андрогенетическую алопецию)?</h3>
+          <h3 data-i18n="faq_3_q">Можно ли остановить АГА (андрогенетическую алопецию)?</h3>
           <span class="faq-icon"></span>
         </button>
-        <div class="faq-a"><div class="faq-a-inner">АГА — это не приговор. Выпадение можно остановить и восстановить волосы, но подход должен быть комплексным, системным и длительным. Это должно стать вашей рутиной, как чистка зубов. На протяжении всего курса я всегда буду на связи, чтобы консультировать и сопровождать вас.</div></div>
+        <div class="faq-a"><div class="faq-a-inner" data-i18n="faq_3_a">АГА — это не приговор. Выпадение можно остановить и восстановить волосы, но подход должен быть комплексным, системным и длительным. Это должно стать вашей рутиной, как чистка зубов. На протяжении всего курса я всегда буду на связи, чтобы консультировать и сопровождать вас.</div></div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- FOOTER -->
+<!-- ============ FOOTER ============ -->
 <footer>
   <div class="wrap">
     <div class="footer-grid">
@@ -857,34 +928,34 @@
         <div class="footer-logo">
           <img src="assets/logo-white.jpg" alt="Moldir Sabitkyzy" style="height:60px;border-radius:4px;">
         </div>
-        <p style="max-width:280px;color:#bcb9b2;">Трихолог-эстетист. Диагностика и восстановление волос и кожи головы.</p>
+        <p style="max-width:280px;color:#bcb9b2;" data-i18n="footer_desc">Трихолог-эстетист. Диагностика и восстановление волос и кожи головы.</p>
       </div>
       <div class="footer-col">
-        <h4>Связь</h4>
+        <h4 data-i18n="footer_contact">Связь</h4>
         <a href="https://wa.me/87059708866" target="_blank" rel="noopener">WhatsApp: +7 705 970 8866</a>
-        <a href="tel:+87059708866">Позвонить</a>
+        <a href="tel:+87059708866" data-i18n="footer_call">Позвонить</a>
       </div>
       <div class="footer-col">
-        <h4>Навигация</h4>
-        <a href="#about">Обо мне</a>
-        <a href="#tools">Продукция</a>
-        <a href="#price">Услуги и цены</a>
-        <a href="#faq">Вопросы</a>
+        <h4 data-i18n="footer_nav">Навигация</h4>
+        <a href="#about" data-i18n="nav_about">Обо мне</a>
+        <a href="#price" data-i18n="nav_price">Услуги</a>
+        <a href="#reviews" data-i18n="nav_reviews">Отзывы</a>
+        <a href="#faq" data-i18n="nav_faq">Вопросы</a>
       </div>
     </div>
     <div class="footer-bottom">
       <span>© 2026 Moldir Sabitkyzy Hair Expert</span>
-      <span>Не является медицинской услугой</span>
+      <span data-i18n="footer_disclaimer">Не является медицинской услугой</span>
     </div>
   </div>
 </footer>
 
-<!-- FLOATING WHATSAPP -->
+<!-- ============ FLOATING WHATSAPP ============ -->
 <a class="float-wa" href="https://wa.me/87059708866" target="_blank" rel="noopener" aria-label="Написать в WhatsApp">
   <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.2h.01c5.46 0 9.91-4.45 9.91-9.91C21.96 6.45 17.5 2 12.04 2zm5.84 14.13c-.25.7-1.24 1.29-2.03 1.46-.54.11-1.24.2-3.6-.77-3.02-1.25-4.96-4.31-5.11-4.51-.15-.2-1.22-1.62-1.22-3.09 0-1.47.77-2.19 1.04-2.49.27-.3.6-.37.8-.37.2 0 .4 0 .57.01.18.01.43-.07.67.51.25.6.85 2.08.92 2.23.07.15.12.33.02.53-.1.2-.15.32-.3.49-.15.17-.31.38-.45.51-.15.15-.3.31-.13.61.17.3.77 1.27 1.65 2.06 1.14 1.02 2.1 1.33 2.4 1.48.3.15.48.13.65-.08.18-.2.75-.87.95-1.17.2-.3.4-.25.67-.15.27.1 1.74.82 2.04.97.3.15.5.22.57.35.07.13.07.74-.18 1.44z"/></svg>
 </a>
 
-<!-- QUIZ MODAL -->
+<!-- ============ QUIZ MODAL ============ -->
 <div class="quiz-overlay" id="quizOverlay">
   <div class="quiz-modal" role="dialog" aria-modal="true" aria-label="Анкета">
     <div class="quiz-top">
@@ -898,64 +969,64 @@
 
       <!-- Step 1 -->
       <div class="quiz-screen active" data-step="1">
-        <div class="quiz-q-title">Что вас беспокоит больше всего?</div>
-        <div class="quiz-options" data-q="Главная проблема">
-          <div class="quiz-option"><span>Выпадение волос</span><span class="opt-check"></span></div>
-          <div class="quiz-option"><span>Зуд, перхоть, раздражение кожи головы</span><span class="opt-check"></span></div>
-          <div class="quiz-option"><span>Потеря густоты и объёма</span><span class="opt-check"></span></div>
-          <div class="quiz-option"><span>Ломкость, сечение, не растёт длина</span><span class="opt-check"></span></div>
+        <div class="quiz-q-title" data-i18n="q1_title">Что вас беспокоит больше всего?</div>
+        <div class="quiz-options" data-q-ru="Главная проблема" data-q-kk="Негізгі мәселе">
+          <div class="quiz-option"><span data-i18n="q1_o1">Выпадение волос</span><span class="opt-check"></span></div>
+          <div class="quiz-option"><span data-i18n="q1_o2">Зуд, перхоть, раздражение кожи головы</span><span class="opt-check"></span></div>
+          <div class="quiz-option"><span data-i18n="q1_o3">Потеря густоты и объёма</span><span class="opt-check"></span></div>
+          <div class="quiz-option"><span data-i18n="q1_o4">Ломкость, сечение, не растёт длина</span><span class="opt-check"></span></div>
         </div>
       </div>
 
       <!-- Step 2 -->
       <div class="quiz-screen" data-step="2">
-        <div class="quiz-q-title">Как давно вы заметили проблему?</div>
-        <div class="quiz-options" data-q="Как давно проблема">
-          <div class="quiz-option"><span>Меньше месяца</span><span class="opt-check"></span></div>
-          <div class="quiz-option"><span>1–3 месяца</span><span class="opt-check"></span></div>
-          <div class="quiz-option"><span>3–12 месяцев</span><span class="opt-check"></span></div>
-          <div class="quiz-option"><span>Больше года</span><span class="opt-check"></span></div>
+        <div class="quiz-q-title" data-i18n="q2_title">Как давно вы заметили проблему?</div>
+        <div class="quiz-options" data-q-ru="Как давно проблема" data-q-kk="Мәселе қашаннан бар">
+          <div class="quiz-option"><span data-i18n="q2_o1">Меньше месяца</span><span class="opt-check"></span></div>
+          <div class="quiz-option"><span data-i18n="q2_o2">1–3 месяца</span><span class="opt-check"></span></div>
+          <div class="quiz-option"><span data-i18n="q2_o3">3–12 месяцев</span><span class="opt-check"></span></div>
+          <div class="quiz-option"><span data-i18n="q2_o4">Больше года</span><span class="opt-check"></span></div>
         </div>
       </div>
 
       <!-- Step 3 -->
       <div class="quiz-screen" data-step="3">
-        <div class="quiz-q-title">Как бы вы описали тип кожи головы?</div>
-        <div class="quiz-options" data-q="Тип кожи головы">
-          <div class="quiz-option"><span>Сухая, есть стянутость</span><span class="opt-check"></span></div>
-          <div class="quiz-option"><span>Жирная, быстро пачкаются волосы</span><span class="opt-check"></span></div>
-          <div class="quiz-option"><span>Комбинированная</span><span class="opt-check"></span></div>
-          <div class="quiz-option"><span>Затрудняюсь ответить</span><span class="opt-check"></span></div>
+        <div class="quiz-q-title" data-i18n="q3_title">Как бы вы описали тип кожи головы?</div>
+        <div class="quiz-options" data-q-ru="Тип кожи головы" data-q-kk="Бас терісінің түрі">
+          <div class="quiz-option"><span data-i18n="q3_o1">Сухая, есть стянутость</span><span class="opt-check"></span></div>
+          <div class="quiz-option"><span data-i18n="q3_o2">Жирная, быстро пачкаются волосы</span><span class="opt-check"></span></div>
+          <div class="quiz-option"><span data-i18n="q3_o3">Комбинированная</span><span class="opt-check"></span></div>
+          <div class="quiz-option"><span data-i18n="q3_o4">Затрудняюсь ответить</span><span class="opt-check"></span></div>
         </div>
       </div>
 
       <!-- Step 4 -->
       <div class="quiz-screen" data-step="4">
-        <div class="quiz-q-title">Что могло стать причиной? (можно не знать точно)</div>
-        <div class="quiz-options" data-q="Возможная причина">
-          <div class="quiz-option"><span>Стресс, недосып, усталость</span><span class="opt-check"></span></div>
-          <div class="quiz-option"><span>Болезнь, приём препаратов, гормоны</span><span class="opt-check"></span></div>
-          <div class="quiz-option"><span>Роды / послеродовой период</span><span class="opt-check"></span></div>
-          <div class="quiz-option"><span>Не знаю, хочу разобраться на диагностике</span><span class="opt-check"></span></div>
+        <div class="quiz-q-title" data-i18n="q4_title">Что могло стать причиной? (можно не знать точно)</div>
+        <div class="quiz-options" data-q-ru="Возможная причина" data-q-kk="Ықтимал себеп">
+          <div class="quiz-option"><span data-i18n="q4_o1">Стресс, недосып, усталость</span><span class="opt-check"></span></div>
+          <div class="quiz-option"><span data-i18n="q4_o2">Болезнь, приём препаратов, гормоны</span><span class="opt-check"></span></div>
+          <div class="quiz-option"><span data-i18n="q4_o3">Роды / послеродовой период</span><span class="opt-check"></span></div>
+          <div class="quiz-option"><span data-i18n="q4_o4">Не знаю, хочу разобраться на диагностике</span><span class="opt-check"></span></div>
         </div>
       </div>
 
       <!-- Step 5 -->
       <div class="quiz-screen" data-step="5">
-        <div class="quiz-q-title">Какой результат для вас сейчас в приоритете?</div>
-        <div class="quiz-options" data-q="Желаемый результат">
-          <div class="quiz-option"><span>Остановить выпадение</span><span class="opt-check"></span></div>
-          <div class="quiz-option"><span>Вернуть густоту и объём</span><span class="opt-check"></span></div>
-          <div class="quiz-option"><span>Убрать зуд и дискомфорт кожи головы</span><span class="opt-check"></span></div>
-          <div class="quiz-option"><span>Отрастить длину без сечения</span><span class="opt-check"></span></div>
+        <div class="quiz-q-title" data-i18n="q5_title">Какой результат для вас сейчас в приоритете?</div>
+        <div class="quiz-options" data-q-ru="Желаемый результат" data-q-kk="Қалаған нәтиже">
+          <div class="quiz-option"><span data-i18n="q5_o1">Остановить выпадение</span><span class="opt-check"></span></div>
+          <div class="quiz-option"><span data-i18n="q5_o2">Вернуть густоту и объём</span><span class="opt-check"></span></div>
+          <div class="quiz-option"><span data-i18n="q5_o3">Убрать зуд и дискомфорт кожи головы</span><span class="opt-check"></span></div>
+          <div class="quiz-option"><span data-i18n="q5_o4">Отрастить длину без сечения</span><span class="opt-check"></span></div>
         </div>
       </div>
 
       <!-- Step 6: contact -->
       <div class="quiz-screen" data-step="6">
-        <div class="quiz-q-title">Как к вам обращаться и куда написать с результатом?</div>
-        <input type="text" class="quiz-input" id="inputName" placeholder="Ваше имя">
-        <input type="tel" class="quiz-input" id="inputPhone" placeholder="Номер телефона (WhatsApp)">
+        <div class="quiz-q-title" data-i18n="q6_title">Как к вам обращаться и куда написать с результатом?</div>
+        <input type="text" class="quiz-input" id="inputName" data-i18n-placeholder="q6_name">
+        <input type="tel" class="quiz-input" id="inputPhone" data-i18n-placeholder="q6_phone">
       </div>
 
       <!-- Step 7: summary -->
@@ -963,30 +1034,294 @@
         <div class="quiz-final-icon">
           <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
         </div>
-        <div class="quiz-q-title">Готово, проверьте ответы</div>
+        <div class="quiz-q-title" data-i18n="q7_title">Готово, проверьте ответы</div>
         <div class="quiz-summary-list" id="summaryList"></div>
-        <p style="font-size:14px;color:var(--stone);line-height:1.6;">Нажмите «Отправить» — откроется WhatsApp с вашими ответами, отправьте сообщение, и я отвечу вам лично.</p>
+        <p style="font-size:14px;color:var(--stone);line-height:1.6;" data-i18n="q7_text">Нажмите «Отправить» — откроется WhatsApp с вашими ответами, отправьте сообщение, и я отвечу вам лично.</p>
       </div>
 
     </div>
 
     <div class="quiz-body" style="padding-top:0;">
       <div class="quiz-nav">
-        <button class="quiz-back" id="quizBackBtn" style="visibility:hidden;">Назад</button>
-        <button class="quiz-next" id="quizNextBtn" disabled>Далее</button>
+        <button class="quiz-back" id="quizBackBtn" style="visibility:hidden;" data-i18n="quiz_back">Назад</button>
+        <button class="quiz-next" id="quizNextBtn" disabled data-i18n="quiz_next">Далее</button>
       </div>
     </div>
   </div>
 </div>
 
 <script>
+  // ===================== I18N =====================
+  const translations = {
+    ru: {
+      nav_about: "Обо мне",
+      nav_price: "Услуги",
+      nav_reviews: "Отзывы",
+      nav_faq: "Вопросы",
+      hero_eyebrow: "Эстетическая трихология · Алматы",
+      hero_title: "Ваш мастер по<br><em>реконструкции</em> волос",
+      hero_sub: "Трихолог-эстетист",
+      hero_desc: "Моя цель — вернуть вашей коже головы комфорт, а волосам густоту, силу, блеск и красоту.",
+      hero_cta: "Записаться на диагностику",
+      hero_cta_secondary: "Смотреть цены",
+      hero_lens_label: "диагностика кожи головы",
+      pains_title: "Я помогу разобраться в причинах и&nbsp;подберу уход, если вас беспокоят:",
+      pain_1: "Зуд, шелушение, перхоть, сухость или избыточная жирность кожи головы",
+      pain_2: "Чувство стянутости и обезвоженности кожи, болезненность у корней",
+      pain_3: "Выпадение волос после стресса, болезни или приёма препаратов",
+      pain_4: "Потеря густоты, объёма и качества волос",
+      pain_5: "Ломкость, сечение и невозможность отрастить длину",
+      pain_6: "Не понимаете, с чем именно связана проблема, и хотите точный диагноз",
+      about_title: "Мои компетенции<br>и принципы работы",
+      about_eyebrow: "Обо мне",
+      about_1_title: "Опыт и насмотренность",
+      about_1_text: "Практический опыт 6,5 лет, непрерывное обучение и свыше 5000 проведённых трихоскопий.",
+      about_2_title: "Без агрессивного вмешательства",
+      about_2_text: "Работаю исключительно с помощью косметики и космецевтики — чистая органика, без лекарственных средств, гормональных препаратов и инъекций.",
+      about_3_title: "Профессиональная ответственность",
+      about_3_text: "Не ставлю диагнозы и не назначаю медикаменты. Если ситуация (рубцовая алопеция, инфекции, грибок) требует медицинского лечения — своевременно перенаправлю к врачу-дерматологу. Моя задача — помочь там, где работают инструменты эстетической трихологии.",
+      stat_1: "лет практического опыта в&nbsp;трихологии",
+      stat_2: "проведённых трихоскопий",
+      stat_3: "гормонов и&nbsp;медикаментов в&nbsp;уходе",
+      price_title: "Услуги и стоимость",
+      price_eyebrow: "Прайс-лист",
+      price_1_name: "Диагностика под трихоскопом + консультация",
+      price_1_desc: "<span class='emoji'>🔍</span>Трихоскопия — диагностика состояния кожи головы и волос с помощью специального оборудования.",
+      price_2_name: "Лазерный шлем",
+      price_2_desc: "<span class='emoji'>🔴</span>Воздействует низкоинтенсивным лазером на кожу головы, стимулируя волосяные фолликулы.",
+      price_2_time: "20 минут",
+      price_3_name: "Массажный шлем",
+      price_3_desc: "<span class='emoji'>💆‍♀️</span>Улучшает кровообращение кожи головы, расслабляет и усиливает действие уходовых процедур.",
+      price_3_time: "15 минут",
+      price_4_name: "Озонотерапия",
+      price_4_desc: "<span class='emoji'>💨</span>Улучшает микроциркуляцию кожи головы и создаёт благоприятные условия для здоровья волос.",
+      price_4_time: "40 минут",
+      price_5_name: "Фототерапия",
+      price_5_desc: "<span class='emoji'>💡</span>Воздействие световыми волнами на кожу головы при псориазе — снимает воспаление, зуд и шелушение.",
+      price_6_name: "Трихологический пилинг",
+      price_6_desc: "Система из 3 шагов: пилинг / эмульсия / маска. Однократно — для профилактики, курсом — при наличии патологии.",
+      price_6_time: "1 час",
+      price_note: "Точную программу и количество процедур определяем после диагностики под трихоскопом.",
+      photo_title: "Фототерапия при псориазе кожи головы",
+      photo_text: "Метод воздействия световыми волнами определённой длины на поражённые участки кожи. Помогает уменьшить воспаление, зуд и шелушение, продлевает период ремиссии. Рекомендуется в составе комплексного ухода и по индивидуальному плану.",
+      photo_check_1: "Уменьшает покраснение и воспаление",
+      photo_check_2: "Снижает зуд и дискомфорт",
+      photo_check_3: "Уменьшает шелушение",
+      photo_check_4: "Поддерживает восстановление кожи",
+      reviews_eyebrow: "Отзывы клиентов",
+      reviews_title: "Что говорят те, кто уже прошёл курс",
+      reviews_text: "Реальная переписка с клиентами — до и после ухода.",
+      reviews_hint: "← Листайте, чтобы посмотреть все отзывы →",
+      quizband_eyebrow: "Бесплатно · 2 минуты",
+      quizband_title: "Пройдите короткую анкету —<br>и получите рекомендацию лично от меня",
+      quizband_text: "Отвечу на ваши ответы в WhatsApp и предложу подходящий формат диагностики и ухода.",
+      quizband_cta: "Пройти анкету",
+      faq_title: "Частые вопросы",
+      faq_eyebrow: "Важно знать",
+      faq_1_q: "Даёте ли вы 100% гарантию, что волосы вырастут?",
+      faq_1_a: "Ни один адекватный специалист не даст таких обещаний. Объём восстановленных волос зависит от того, как скоро вы обратились. Но загустить их так, чтобы это было визуально незаметно — можно.",
+      faq_2_q: "Как быстро будет виден результат?",
+      faq_2_a: "Первые улучшения (снижение выпадения, уход зуда и дискомфорта) вы увидите уже через месяц — это гарантировано. Окончательные результаты индивидуальны: у кого-то уйдёт месяц, у кого-то полгода или год. Мы не используем гормоны, поэтому требуется время и ваше терпение.",
+      faq_3_q: "Можно ли остановить АГА (андрогенетическую алопецию)?",
+      faq_3_a: "АГА — это не приговор. Выпадение можно остановить и восстановить волосы, но подход должен быть комплексным, системным и длительным. Это должно стать вашей рутиной, как чистка зубов. На протяжении всего курса я всегда буду на связи, чтобы консультировать и сопровождать вас.",
+      footer_desc: "Трихолог-эстетист. Диагностика и восстановление волос и кожи головы.",
+      footer_contact: "Связь",
+      footer_call: "Позвонить",
+      footer_nav: "Навигация",
+      footer_disclaimer: "Не является медицинской услугой",
+      q1_title: "Что вас беспокоит больше всего?",
+      q1_o1: "Выпадение волос",
+      q1_o2: "Зуд, перхоть, раздражение кожи головы",
+      q1_o3: "Потеря густоты и объёма",
+      q1_o4: "Ломкость, сечение, не растёт длина",
+      q2_title: "Как давно вы заметили проблему?",
+      q2_o1: "Меньше месяца",
+      q2_o2: "1–3 месяца",
+      q2_o3: "3–12 месяцев",
+      q2_o4: "Больше года",
+      q3_title: "Как бы вы описали тип кожи головы?",
+      q3_o1: "Сухая, есть стянутость",
+      q3_o2: "Жирная, быстро пачкаются волосы",
+      q3_o3: "Комбинированная",
+      q3_o4: "Затрудняюсь ответить",
+      q4_title: "Что могло стать причиной? (можно не знать точно)",
+      q4_o1: "Стресс, недосып, усталость",
+      q4_o2: "Болезнь, приём препаратов, гормоны",
+      q4_o3: "Роды / послеродовой период",
+      q4_o4: "Не знаю, хочу разобраться на диагностике",
+      q5_title: "Какой результат для вас сейчас в приоритете?",
+      q5_o1: "Остановить выпадение",
+      q5_o2: "Вернуть густоту и объём",
+      q5_o3: "Убрать зуд и дискомфорт кожи головы",
+      q5_o4: "Отрастить длину без сечения",
+      q6_title: "Как к вам обращаться и куда написать с результатом?",
+      q6_name: "Ваше имя",
+      q6_phone: "Номер телефона (WhatsApp)",
+      q7_title: "Готово, проверьте ответы",
+      q7_text: "Нажмите «Отправить» — откроется WhatsApp с вашими ответами, отправьте сообщение, и я отвечу вам лично.",
+      quiz_back: "Назад",
+      quiz_next: "Далее",
+      quiz_next_final: "Отправить в WhatsApp",
+      quiz_step_label: (n,t) => `Шаг ${n} из ${t}`,
+      summary_name: "Имя",
+      summary_phone: "Телефон",
+      wa_greeting: "Здравствуйте! Я прошла(ел) анкету на сайте."
+    },
+    kk: {
+      nav_about: "Мен туралы",
+      nav_price: "Қызметтер",
+      nav_reviews: "Пікірлер",
+      nav_faq: "Сұрақтар",
+      hero_eyebrow: "Эстетикалық трихология · Алматы",
+      hero_title: "Шашты<br><em>қалпына келтіру</em> шебері",
+      hero_sub: "Трихолог-эстетист",
+      hero_desc: "Менің мақсатым — бас терісіне жайлылық, шашқа қалыңдық, күш, жылтыр мен сұлулық қайтару.",
+      hero_cta: "Диагностикаға жазылу",
+      hero_cta_secondary: "Бағаларды көру",
+      hero_lens_label: "бас терісінің диагностикасы",
+      pains_title: "Сізді мыналар мазалайтын болса, себебін анықтап, күтім таңдап беремін:",
+      pain_1: "Қышу, қабыршақтану, кебек, бас терісінің құрғақтығы немесе майлылығы",
+      pain_2: "Терінің тартылу және сусыздану сезімі, түбірдегі ауырсыну",
+      pain_3: "Стресстен, аурудан немесе препараттардан кейінгі шаш түсуі",
+      pain_4: "Шаштың қалыңдығы мен көлемінің, сапасының төмендеуі",
+      pain_5: "Шаштың сынғыштығы, ұшының қиылуы және ұзаруының тоқтауы",
+      pain_6: "Мәселенің нақты себебін білмейсіз және дәл диагноз қойғыңыз келеді",
+      about_title: "Менің құзыреттілігім<br>және жұмыс принциптерім",
+      about_eyebrow: "Мен туралы",
+      about_1_title: "Тәжірибе және білік",
+      about_1_text: "6,5 жылдық практикалық тәжірибе, үздіксіз оқу және 5000-нан астам жүргізілген трихоскопия.",
+      about_2_title: "Агрессивті араласусыз",
+      about_2_text: "Тек косметика және косметцевтика көмегімен жұмыс істеймін — таза органика, дәрі-дәрмексіз, гормоналды препараттар мен инъекциясыз.",
+      about_3_title: "Кәсіби жауапкершілік",
+      about_3_text: "Диагноз қоймаймын және дәрі-дәрмек тағайындамаймын. Егер жағдайыңыз (тыртықты алопеция, инфекциялар, саңырауқұлақ) медициналық емдеуді талап етсе — сізді дереу дерматолог дәрігерге жолдаймын. Менің міндетім — эстетикалық трихология құралдары жұмыс істейтін жерде көмектесу.",
+      stat_1: "жыл трихологиядағы практикалық тәжірибе",
+      stat_2: "жүргізілген трихоскопия",
+      stat_3: "күтімде гормон және дәрі-дәрмек жоқ",
+      price_title: "Қызметтер мен бағалар",
+      price_eyebrow: "Баға тізімі",
+      price_1_name: "Трихоскоппен диагностика + консультация",
+      price_1_desc: "<span class='emoji'>🔍</span>Трихоскопия — арнайы жабдық көмегімен бас терісі мен шаштың жағдайын диагностикалау.",
+      price_2_name: "Лазерлік дулыға",
+      price_2_desc: "<span class='emoji'>🔴</span>Бас терісіне төмен қарқынды лазермен әсер етіп, шаш фолликулаларын ынталандырады.",
+      price_2_time: "20 минут",
+      price_3_name: "Массаждық дулыға",
+      price_3_desc: "<span class='emoji'>💆‍♀️</span>Бас терісінің қан айналымын жақсартады, релаксация береді және күтім процедураларының әсерін күшейтеді.",
+      price_3_time: "15 минут",
+      price_4_name: "Озонотерапия",
+      price_4_desc: "<span class='emoji'>💨</span>Бас терісінің микроциркуляциясын жақсартып, шаш денсаулығына қолайлы жағдай жасайды.",
+      price_4_time: "40 минут",
+      price_5_name: "Фототерапия",
+      price_5_desc: "<span class='emoji'>💡</span>Псориазда бас терісіне жарық толқындарымен әсер ету — қабынуды, қышуды және қабыршақтануды басады.",
+      price_6_name: "Трихологиялық пилинг",
+      price_6_desc: "3 қадамнан тұратын жүйе: пилинг / эмульсия / маска. Бір рет — профилактика үшін, курспен — патология болған жағдайда.",
+      price_6_time: "1 сағат",
+      price_note: "Нақты бағдарлама мен процедуралар саны трихоскоппен диагностикадан кейін анықталады.",
+      photo_title: "Бас терісінің псориазындағы фототерапия",
+      photo_text: "Терінің зақымдалған аймақтарына белгілі бір ұзындықтағы жарық толқындарымен әсер ету әдісі. Қабынуды, қышуды және қабыршақтануды азайтуға көмектеседі, ремиссия кезеңін ұзартады. Жақсы нәтиже үшін кешенді күтім құрамында және жеке жоспар бойынша ұсынылады.",
+      photo_check_1: "Қызаруды және қабынуды азайтады",
+      photo_check_2: "Қышу мен жайсыздықты төмендетеді",
+      photo_check_3: "Қабыршақтануды азайтады",
+      photo_check_4: "Терінің қалпына келуін қолдайды",
+      reviews_eyebrow: "Клиенттер пікірлері",
+      reviews_title: "Курстан өткендер не дейді",
+      reviews_text: "Клиенттермен нақты хат алмасу — күтімге дейін және кейін.",
+      reviews_hint: "← Барлық пікірлерді көру үшін айналдырыңыз →",
+      quizband_eyebrow: "Тегін · 2 минут",
+      quizband_title: "Қысқа сауалнамадан өтіңіз —<br>және менен жеке кеңес алыңыз",
+      quizband_text: "Жауаптарыңызға WhatsApp-та жауап беремін және диагностика мен күтімнің қолайлы форматын ұсынамын.",
+      quizband_cta: "Сауалнамадан өту",
+      faq_title: "Жиі қойылатын сұрақтар",
+      faq_eyebrow: "Білу маңызды",
+      faq_1_q: "Шаш өсетініне 100% кепілдік бересіз бе?",
+      faq_1_a: "Ешбір білікті маман мұндай уәде бермейді. Қалпына келген шаштың көлемі сіздің қашан жүгінгеніңізге байланысты. Бірақ оны көзге көрінбейтіндей етіп қалыңдатуға болады.",
+      faq_2_q: "Нәтиже қаншалықты тез көрінеді?",
+      faq_2_a: "Алғашқы жақсарулар (шаш түсуінің азаюы, қышу мен жайсыздықтың кетуі) бір айдан кейін көрінеді — бұл кепілдендірілген. Соңғы нәтижелер әркімде әртүрлі: біреуде бір ай, біреуде жарты жыл немесе бір жыл кетеді. Біз гормон қолданбаймыз, сондықтан уақыт пен сабыр қажет.",
+      faq_3_q: "АГА (андрогендік алопеция) тоқтатуға бола ма?",
+      faq_3_a: "АГА — үкім емес. Шаш түсуін тоқтатып, қалпына келтіруге болады, бірақ тәсіл кешенді, жүйелі және ұзақ болуы керек. Бұл тіс тазалау сияқты сіздің күнделікті рәсіміңізге айналуы тиіс. Курс барысында мен сізге кеңес беріп, қолдау көрсету үшін әрдайым байланыста боламын.",
+      footer_desc: "Трихолог-эстетист. Шаш пен бас терісінің диагностикасы және қалпына келтіру.",
+      footer_contact: "Байланыс",
+      footer_call: "Қоңырау шалу",
+      footer_nav: "Навигация",
+      footer_disclaimer: "Медициналық қызмет емес",
+      q1_title: "Сізді ең көп нені мазалайды?",
+      q1_o1: "Шаш түсуі",
+      q1_o2: "Қышу, кебек, бас терісінің тітіркенуі",
+      q1_o3: "Қалыңдық пен көлемнің жоғалуы",
+      q1_o4: "Сынғыштық, ұшының қиылуы, ұзармайды",
+      q2_title: "Мәселені қашан байқадыңыз?",
+      q2_o1: "Бір айдан аз",
+      q2_o2: "1–3 ай",
+      q2_o3: "3–12 ай",
+      q2_o4: "Бір жылдан көп",
+      q3_title: "Бас терісінің түрін қалай сипаттар едіңіз?",
+      q3_o1: "Құрғақ, тартылу бар",
+      q3_o2: "Майлы, шаш тез ластанады",
+      q3_o3: "Аралас",
+      q3_o4: "Жауап беруге қиналамын",
+      q4_title: "Себебі не болуы мүмкін? (нақты білмесеңіз де болады)",
+      q4_o1: "Стресс, ұйқысыздық, шаршау",
+      q4_o2: "Ауру, дәрі қабылдау, гормондар",
+      q4_o3: "Босану / босанудан кейінгі кезең",
+      q4_o4: "Білмеймін, диагностикада анықтағым келеді",
+      q5_title: "Қазір сіз үшін қандай нәтиже басым?",
+      q5_o1: "Шаш түсуін тоқтату",
+      q5_o2: "Қалыңдық пен көлемді қайтару",
+      q5_o3: "Бас терісінің қышуы мен жайсыздығын кетіру",
+      q5_o4: "Ұшы қиылмай ұзарту",
+      q6_title: "Сізге қалай хабарласамыз және нәтижені қайда жіберейік?",
+      q6_name: "Атыңыз",
+      q6_phone: "Телефон нөірі (WhatsApp)",
+      q7_title: "Дайын, жауаптарды тексеріңіз",
+      q7_text: "«Жіберу» түймесін басыңыз — WhatsApp жауаптарыңызбен ашылады, хабарламаны жіберіңіз, мен сізге жеке жауап беремін.",
+      quiz_back: "Артқа",
+      quiz_next: "Келесі",
+      quiz_next_final: "WhatsApp-қа жіберу",
+      quiz_step_label: (n,t) => `${n}/${t} қадам`,
+      summary_name: "Аты",
+      summary_phone: "Телефон",
+      wa_greeting: "Сәлеметсіз бе! Мен сайттағы сауалнамадан өттім."
+    }
+  };
+
+  let currentLang = 'ru';
+
+  function applyLang(lang){
+    currentLang = lang;
+    document.documentElement.lang = lang === 'ru' ? 'ru' : 'kk';
+    const dict = translations[lang];
+
+    document.querySelectorAll('[data-i18n]').forEach(el => {
+      const key = el.getAttribute('data-i18n');
+      if (dict[key] !== undefined) el.innerHTML = dict[key];
+    });
+    document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+      const key = el.getAttribute('data-i18n-placeholder');
+      if (dict[key] !== undefined) el.placeholder = dict[key];
+    });
+    document.querySelectorAll('.lang-btn').forEach(btn => {
+      btn.classList.toggle('active', btn.dataset.lang === lang);
+    });
+
+    // quiz dynamic bits
+    stepLabel.textContent = dict.quiz_step_label(currentStep, TOTAL_STEPS);
+    backBtn.textContent = dict.quiz_back;
+    nextBtn.textContent = currentStep === TOTAL_STEPS ? dict.quiz_next_final : dict.quiz_next;
+    if (currentStep === TOTAL_STEPS) buildSummary();
+  }
+
+  document.getElementById('langSwitch').addEventListener('click', (e) => {
+    const btn = e.target.closest('.lang-btn');
+    if (!btn) return;
+    applyLang(btn.dataset.lang);
+  });
+
   // ---------- header scroll state ----------
   const header = document.getElementById('siteHeader');
   window.addEventListener('scroll', () => {
     header.classList.toggle('scrolled', window.scrollY > 10);
   });
 
-  // ---------- mobile burger -> opens quiz nav simply scrolls (basic menu toggle) ----------
+  // ---------- mobile burger ----------
   const burgerBtn = document.getElementById('burgerBtn');
   const navLinks = document.querySelector('.nav-links');
   burgerBtn.addEventListener('click', () => {
@@ -1065,18 +1400,19 @@
   function renderStep(){
     screens.forEach(s => s.classList.toggle('active', Number(s.dataset.step) === currentStep));
     progressFill.style.width = (currentStep / TOTAL_STEPS * 100) + '%';
-    stepLabel.textContent = `Шаг ${currentStep} из ${TOTAL_STEPS}`;
+    const dict = translations[currentLang];
+    stepLabel.textContent = dict.quiz_step_label(currentStep, TOTAL_STEPS);
     backBtn.style.visibility = currentStep === 1 ? 'hidden' : 'visible';
 
     if (currentStep === TOTAL_STEPS) {
       buildSummary();
-      nextBtn.textContent = 'Отправить в WhatsApp';
+      nextBtn.textContent = dict.quiz_next_final;
       nextBtn.disabled = false;
     } else if (currentStep === 6) {
-      nextBtn.textContent = 'Далее';
+      nextBtn.textContent = dict.quiz_next;
       validateContactStep();
     } else {
-      nextBtn.textContent = 'Далее';
+      nextBtn.textContent = dict.quiz_next;
       validateOptionStep();
     }
   }
@@ -1096,20 +1432,21 @@
 
   // option click handling
   document.querySelectorAll('.quiz-options').forEach(group => {
-    const question = group.dataset.q;
     group.querySelectorAll('.quiz-option').forEach(opt => {
       opt.addEventListener('click', () => {
         group.querySelectorAll('.quiz-option').forEach(o => o.classList.remove('selected'));
         opt.classList.add('selected');
         const answerText = opt.querySelector('span').textContent;
         const stepNum = Number(opt.closest('.quiz-screen').dataset.step);
-        answers[stepNum] = { question, answer: answerText };
+        const questionText = group.dataset['q' + (currentLang === 'ru' ? 'Ru' : 'Kk')];
+        answers[stepNum] = { question: questionText, answer: answerText };
         validateOptionStep();
       });
     });
   });
 
   function buildSummary(){
+    const dict = translations[currentLang];
     const list = document.getElementById('summaryList');
     list.innerHTML = '';
     for (let i = 1; i <= 5; i++) {
@@ -1124,19 +1461,20 @@
     const phone = document.getElementById('inputPhone').value.trim();
     const rowName = document.createElement('div');
     rowName.className = 'summary-row';
-    rowName.innerHTML = `<span class="sq">Имя</span><span class="sa">${name}</span>`;
+    rowName.innerHTML = `<span class="sq">${dict.summary_name}</span><span class="sa">${name}</span>`;
     list.appendChild(rowName);
     const rowPhone = document.createElement('div');
     rowPhone.className = 'summary-row';
-    rowPhone.innerHTML = `<span class="sq">Телефон</span><span class="sa">${phone}</span>`;
+    rowPhone.innerHTML = `<span class="sq">${dict.summary_phone}</span><span class="sa">${phone}</span>`;
     list.appendChild(rowPhone);
   }
 
   function buildWhatsAppMessage(){
+    const dict = translations[currentLang];
     const name = document.getElementById('inputName').value.trim();
     const phone = document.getElementById('inputPhone').value.trim();
     let lines = [];
-    lines.push('Здравствуйте! Я прошла(ел) анкету на сайте.');
+    lines.push(dict.wa_greeting);
     lines.push('');
     for (let i = 1; i <= 5; i++) {
       if (answers[i]) {
@@ -1144,8 +1482,8 @@
       }
     }
     lines.push('');
-    lines.push(`Имя: ${name}`);
-    lines.push(`Телефон: ${phone}`);
+    lines.push(`${dict.summary_name}: ${name}`);
+    lines.push(`${dict.summary_phone}: ${phone}`);
     return lines.join('\n');
   }
 
@@ -1153,7 +1491,6 @@
     if (nextBtn.disabled) return;
 
     if (currentStep === TOTAL_STEPS) {
-      // send to WhatsApp
       const msg = encodeURIComponent(buildWhatsAppMessage());
       window.open(`https://wa.me/87059708866?text=${msg}`, '_blank');
       closeQuiz();
