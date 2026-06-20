@@ -377,6 +377,38 @@
     text-align:center;margin-top:18px;font-size:12.5px;color:var(--stone);
     letter-spacing:0.03em;
   }
+  .reviews-note{
+    margin-top:46px;
+    background:var(--white);
+    border:1px solid var(--line);
+    border-radius:8px;
+    padding:30px 34px;
+    display:flex;align-items:center;gap:18px;
+    flex-wrap:wrap;
+  }
+  .reviews-note-icon{
+    flex-shrink:0;
+    width:40px;height:40px;border-radius:50%;
+    background:var(--ink);color:var(--paper);
+    display:flex;align-items:center;justify-content:center;
+    font-size:13px;
+  }
+  .reviews-note p{
+    flex:1 1 320px;
+    font-size:14.5px;line-height:1.65;color:#454440;
+    margin:0;
+  }
+  .reviews-note p strong{color:var(--ink);font-weight:700;}
+  .reviews-note-link{
+    flex-shrink:0;
+    font-size:13px;font-weight:700;letter-spacing:0.03em;
+    border-bottom:1px solid var(--ink);padding-bottom:2px;
+    white-space:nowrap;
+  }
+  @media (max-width:640px){
+    .reviews-note{padding:24px 22px;}
+    .reviews-note-link{margin-left:58px;}
+  }
 
   /* ---------- QUIZ CTA BAND ---------- */
   .quiz-band{
@@ -600,6 +632,58 @@
   }
   .quiz-final-icon svg{width:24px;height:24px;}
 
+  /* ---------- CERTIFICATES ---------- */
+  .certs{background:var(--paper-2);}
+  .certs-intro{
+    font-size:15.5px;line-height:1.75;color:#454440;
+    max-width:680px;margin-bottom:50px;margin-top:-30px;
+  }
+  .cert-grid{
+    display:grid;grid-template-columns:repeat(4,1fr);gap:18px;
+  }
+  .cert-card{
+    border-radius:8px;overflow:hidden;
+    border:1px solid var(--line);
+    cursor:zoom-in;
+    aspect-ratio:3/4;
+    background:var(--white);
+    transition:transform .25s ease, box-shadow .25s ease;
+  }
+  .cert-card:hover{transform:translateY(-4px);box-shadow:0 12px 28px rgba(10,10,10,0.1);}
+  .cert-card img{width:100%;height:100%;object-fit:cover;display:block;}
+
+  .cert-lightbox{
+    position:fixed;inset:0;z-index:600;
+    background:rgba(10,10,10,0.88);
+    display:none;align-items:center;justify-content:center;
+    padding:40px 24px;
+    cursor:zoom-out;
+  }
+  .cert-lightbox.active{display:flex;}
+  .cert-lightbox img{
+    max-width:100%;max-height:90vh;border-radius:6px;
+    box-shadow:0 20px 60px rgba(0,0,0,0.5);
+  }
+  .cert-lightbox-close{
+    position:absolute;top:26px;right:30px;
+    width:42px;height:42px;border-radius:50%;
+    background:rgba(250,249,246,0.12);
+    display:flex;align-items:center;justify-content:center;
+    cursor:pointer;
+  }
+  .cert-lightbox-close::before,.cert-lightbox-close::after{
+    content:"";position:absolute;width:18px;height:1.5px;background:var(--paper);
+  }
+  .cert-lightbox-close::before{transform:rotate(45deg);}
+  .cert-lightbox-close::after{transform:rotate(-45deg);}
+
+  @media (max-width:980px){
+    .cert-grid{grid-template-columns:repeat(2,1fr);}
+  }
+  @media (max-width:560px){
+    .certs-intro{margin-top:-16px;}
+  }
+
   /* ---------- RESPONSIVE ---------- */
   @media (max-width:980px){
     .nav-links{display:none;}
@@ -648,6 +732,7 @@
     </a>
     <nav class="nav-links">
       <a href="#about" data-i18n="nav_about">Обо мне</a>
+      <a href="#certs" data-i18n="nav_certs">Сертификаты</a>
       <a href="#price" data-i18n="nav_price">Услуги</a>
       <a href="#reviews" data-i18n="nav_reviews">Отзывы</a>
       <a href="#faq" data-i18n="nav_faq">Вопросы</a>
@@ -776,6 +861,23 @@
   </div>
 </section>
 
+<!-- ============ CERTIFICATES ============ -->
+<section class="certs" id="certs">
+  <div class="wrap">
+    <div class="section-head">
+      <h2 data-i18n="certs_title">Сертификаты</h2>
+      <span class="section-num" data-i18n="certs_eyebrow">Образование</span>
+    </div>
+    <p class="certs-intro" data-i18n="certs_text">В данном разделе представлены мои сертификаты и документы, подтверждающие прохождение обучения и повышение квалификации в сфере трихологии и эстетического ухода за кожей головы и волосами. Я регулярно совершенствую свои знания и навыки, изучая современные методы диагностики и ухода за волосами и кожей головы.</p>
+    <div class="cert-grid">
+      <div class="cert-card"><img src="assets/certificates/cert-1.png" alt="Сертификат" loading="lazy"></div>
+      <div class="cert-card"><img src="assets/certificates/cert-2.png" alt="Сертификат" loading="lazy"></div>
+      <div class="cert-card"><img src="assets/certificates/cert-3.png" alt="Сертификат" loading="lazy"></div>
+      <div class="cert-card"><img src="assets/certificates/cert-4.png" alt="Сертификат" loading="lazy"></div>
+    </div>
+  </div>
+</section>
+
 <!-- ============ PRICE ============ -->
 <section id="price">
   <div class="wrap">
@@ -798,25 +900,15 @@
       <div class="price-row">
         <span class="pidx">02</span>
         <div class="price-name">
-          <h3 data-i18n="price_2_name">Лазерный шлем</h3>
-          <p class="price-desc" data-i18n="price_2_desc"><span class="emoji">🔴</span>Воздействует низкоинтенсивным лазером на кожу головы, стимулируя волосяные фолликулы.</p>
+          <h3 data-i18n="price_6_name">Трихологический пилинг</h3>
+          <p class="price-desc" data-i18n="price_6_desc">Система из 3 шагов: пилинг / эмульсия / маска. Однократно — для профилактики, курсом — при наличии патологии.</p>
         </div>
-        <span class="price-time" data-i18n="price_2_time">20 минут</span>
-        <span class="price-amount">10 000 ₸</span>
+        <span class="price-time" data-i18n="price_6_time">1 час</span>
+        <span class="price-amount">20 000 ₸</span>
       </div>
 
       <div class="price-row">
         <span class="pidx">03</span>
-        <div class="price-name">
-          <h3 data-i18n="price_3_name">Массажный шлем</h3>
-          <p class="price-desc" data-i18n="price_3_desc"><span class="emoji">💆‍♀️</span>Улучшает кровообращение кожи головы, расслабляет и усиливает действие уходовых процедур.</p>
-        </div>
-        <span class="price-time" data-i18n="price_3_time">15 минут</span>
-        <span class="price-amount">12 000 ₸</span>
-      </div>
-
-      <div class="price-row">
-        <span class="pidx">04</span>
         <div class="price-name">
           <h3 data-i18n="price_4_name">Озонотерапия</h3>
           <p class="price-desc" data-i18n="price_4_desc"><span class="emoji">💨</span>Улучшает микроциркуляцию кожи головы и создаёт благоприятные условия для здоровья волос.</p>
@@ -826,23 +918,33 @@
       </div>
 
       <div class="price-row">
+        <span class="pidx">04</span>
+        <div class="price-name">
+          <h3 data-i18n="price_3_name">Массажный шлем</h3>
+          <p class="price-desc" data-i18n="price_3_desc"><span class="emoji">💆‍♀️</span>Улучшает кровообращение кожи головы, расслабляет и усиливает действие уходовых процедур.</p>
+        </div>
+        <span class="price-time" data-i18n="price_3_time">15 минут</span>
+        <span class="price-amount">12 000 ₸</span>
+      </div>
+
+      <div class="price-row">
         <span class="pidx">05</span>
+        <div class="price-name">
+          <h3 data-i18n="price_2_name">Лазерный шлем</h3>
+          <p class="price-desc" data-i18n="price_2_desc"><span class="emoji">🔴</span>Воздействует низкоинтенсивным лазером на кожу головы, стимулируя волосяные фолликулы.</p>
+        </div>
+        <span class="price-time" data-i18n="price_2_time">20 минут</span>
+        <span class="price-amount">10 000 ₸</span>
+      </div>
+
+      <div class="price-row">
+        <span class="pidx">06</span>
         <div class="price-name">
           <h3 data-i18n="price_5_name">Фототерапия</h3>
           <p class="price-desc" data-i18n="price_5_desc"><span class="emoji">💡</span>Воздействие световыми волнами на кожу головы при псориазе — снимает воспаление, зуд и шелушение.</p>
         </div>
         <span class="price-time">—</span>
         <span class="price-amount">8 000 ₸</span>
-      </div>
-
-      <div class="price-row">
-        <span class="pidx">06</span>
-        <div class="price-name">
-          <h3 data-i18n="price_6_name">Трихологический пилинг</h3>
-          <p class="price-desc" data-i18n="price_6_desc">Система из 3 шагов: пилинг / эмульсия / маска. Однократно — для профилактики, курсом — при наличии патологии.</p>
-        </div>
-        <span class="price-time" data-i18n="price_6_time">1 час</span>
-        <span class="price-amount">20 000 ₸</span>
       </div>
 
     </div>
@@ -870,6 +972,12 @@
       <div class="review-card"><img src="assets/reviews/review-9.png" alt="Отзыв клиента" loading="lazy"></div>
     </div>
     <p class="review-hint" data-i18n="reviews_hint">← Листайте, чтобы посмотреть все отзывы →</p>
+
+    <div class="reviews-note">
+      <span class="reviews-note-icon">▶</span>
+      <p data-i18n="reviews_note"><strong>Помимо отзывов на сайте</strong>, у меня есть аудио- и видеоотзывы от клиентов. Вы можете ознакомиться с ними в актуальных сторис на моей странице.</p>
+      <a href="https://instagram.com/moldir_sabitkyzy_rezerv" target="_blank" rel="noopener" class="reviews-note-link" data-i18n="reviews_note_link">Смотреть в Instagram →</a>
+    </div>
   </div>
 </section>
 
@@ -938,6 +1046,7 @@
       <div class="footer-col">
         <h4 data-i18n="footer_nav">Навигация</h4>
         <a href="#about" data-i18n="nav_about">Обо мне</a>
+        <a href="#certs" data-i18n="nav_certs">Сертификаты</a>
         <a href="#price" data-i18n="nav_price">Услуги</a>
         <a href="#reviews" data-i18n="nav_reviews">Отзывы</a>
         <a href="#faq" data-i18n="nav_faq">Вопросы</a>
@@ -954,6 +1063,12 @@
 <a class="float-wa" href="https://wa.me/77059708866" target="_blank" rel="noopener" aria-label="Написать в WhatsApp">
   <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.2h.01c5.46 0 9.91-4.45 9.91-9.91C21.96 6.45 17.5 2 12.04 2zm5.84 14.13c-.25.7-1.24 1.29-2.03 1.46-.54.11-1.24.2-3.6-.77-3.02-1.25-4.96-4.31-5.11-4.51-.15-.2-1.22-1.62-1.22-3.09 0-1.47.77-2.19 1.04-2.49.27-.3.6-.37.8-.37.2 0 .4 0 .57.01.18.01.43-.07.67.51.25.6.85 2.08.92 2.23.07.15.12.33.02.53-.1.2-.15.32-.3.49-.15.17-.31.38-.45.51-.15.15-.3.31-.13.61.17.3.77 1.27 1.65 2.06 1.14 1.02 2.1 1.33 2.4 1.48.3.15.48.13.65-.08.18-.2.75-.87.95-1.17.2-.3.4-.25.67-.15.27.1 1.74.82 2.04.97.3.15.5.22.57.35.07.13.07.74-.18 1.44z"/></svg>
 </a>
+
+<!-- ============ CERTIFICATE LIGHTBOX ============ -->
+<div class="cert-lightbox" id="certLightbox">
+  <div class="cert-lightbox-close" id="certLightboxClose"></div>
+  <img src="" alt="Сертификат" id="certLightboxImg">
+</div>
 
 <!-- ============ QUIZ MODAL ============ -->
 <div class="quiz-overlay" id="quizOverlay">
@@ -1055,6 +1170,7 @@
   const translations = {
     ru: {
       nav_about: "Обо мне",
+      nav_certs: "Сертификаты",
       nav_price: "Услуги",
       nav_reviews: "Отзывы",
       nav_faq: "Вопросы",
@@ -1083,6 +1199,9 @@
       stat_1: "лет практического опыта в&nbsp;трихологии",
       stat_2: "проведённых трихоскопий",
       stat_3: "гормонов и&nbsp;медикаментов в&nbsp;уходе",
+      certs_title: "Сертификаты",
+      certs_eyebrow: "Образование",
+      certs_text: "В данном разделе представлены мои сертификаты и документы, подтверждающие прохождение обучения и повышение квалификации в сфере трихологии и эстетического ухода за кожей головы и волосами. Я регулярно совершенствую свои знания и навыки, изучая современные методы диагностики и ухода за волосами и кожей головы.",
       price_title: "Услуги и стоимость",
       price_eyebrow: "Прайс-лист",
       price_1_name: "Диагностика под трихоскопом + консультация",
@@ -1112,6 +1231,8 @@
       reviews_title: "Что говорят те, кто уже прошёл курс",
       reviews_text: "Реальная переписка с клиентами — до и после ухода.",
       reviews_hint: "← Листайте, чтобы посмотреть все отзывы →",
+      reviews_note: "<strong>Помимо отзывов на сайте</strong>, у меня есть аудио- и видеоотзывы от клиентов. Вы можете ознакомиться с ними в актуальных сторис на моей странице.",
+      reviews_note_link: "Смотреть в Instagram →",
       quizband_eyebrow: "Бесплатно · 2 минуты",
       quizband_title: "Пройдите короткую анкету —<br>и получите рекомендацию лично от меня",
       quizband_text: "Отвечу на ваши ответы в WhatsApp и предложу подходящий формат диагностики и ухода.",
@@ -1169,6 +1290,7 @@
     },
     kk: {
       nav_about: "Мен туралы",
+      nav_certs: "Сертификаттар",
       nav_price: "Қызметтер",
       nav_reviews: "Пікірлер",
       nav_faq: "Сұрақтар",
@@ -1197,6 +1319,9 @@
       stat_1: "жыл трихологиядағы практикалық тәжірибе",
       stat_2: "жүргізілген трихоскопия",
       stat_3: "күтімде гормон және дәрі-дәрмек жоқ",
+      certs_title: "Сертификаттар",
+      certs_eyebrow: "Білім",
+      certs_text: "Бұл бөлімде трихология және бас терісі мен шашқа эстетикалық күтім саласында оқудан өтуімді және біліктілігімді арттыруымды растайтын сертификаттар мен құжаттар берілген. Мен шаш пен бас терісін диагностикалаудың және күтудің заманауи әдістерін үйрене отырып, білімім мен дағдыларымды үнемі жетілдіремін.",
       price_title: "Қызметтер мен бағалар",
       price_eyebrow: "Баға тізімі",
       price_1_name: "Трихоскоппен диагностика + консультация",
@@ -1226,6 +1351,8 @@
       reviews_title: "Курстан өткендер не дейді",
       reviews_text: "Клиенттермен нақты хат алмасу — күтімге дейін және кейін.",
       reviews_hint: "← Барлық пікірлерді көру үшін айналдырыңыз →",
+      reviews_note: "<strong>Сайттағы пікірлерден басқа</strong>, менде клиенттерден аудио- және видеопікірлер бар. Оларды менің парақшамдағы актуал стористе көре аласыз.",
+      reviews_note_link: "Instagram-да қарау →",
       quizband_eyebrow: "Тегін · 2 минут",
       quizband_title: "Қысқа сауалнамадан өтіңіз —<br>және менен жеке кеңес алыңыз",
       quizband_text: "Жауаптарыңызға WhatsApp-та жауап беремін және диагностика мен күтімнің қолайлы форматын ұсынамын.",
@@ -1506,6 +1633,24 @@
     currentStep--;
     renderStep();
   });
+
+  // ---------- certificate lightbox ----------
+  const certLightbox = document.getElementById('certLightbox');
+  const certLightboxImg = document.getElementById('certLightboxImg');
+  document.querySelectorAll('.cert-card img').forEach(img => {
+    img.addEventListener('click', () => {
+      certLightboxImg.src = img.src;
+      certLightbox.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    });
+  });
+  function closeCertLightbox(){
+    certLightbox.classList.remove('active');
+    document.body.style.overflow = '';
+  }
+  document.getElementById('certLightboxClose').addEventListener('click', closeCertLightbox);
+  certLightbox.addEventListener('click', (e) => { if (e.target === certLightbox) closeCertLightbox(); });
+  document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && certLightbox.classList.contains('active')) closeCertLightbox(); });
 
   // ---------- initialize language on load (sets input placeholders etc.) ----------
   applyLang('ru');
