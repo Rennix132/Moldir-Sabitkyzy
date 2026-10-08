@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Moldir Sabitkyzy — Трихолог-эстетист</title>
-<meta name="description" content="Трихолог-эстетист Moldir Sabitkyzy. Диагностика и восстановление волос и кожи головы. Актау.">
+<title>Moldir Sabitkyzy — Инновационный центр эстетической трихологии</title>
+<meta name="description" content="Инновационный центр эстетической трихологии в Актау. Трихоскопия, Head SPA, LLLT лазер, озон, аппаратный уход. Без инъекций и гормонов.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -324,29 +324,173 @@
     margin-top:34px;font-size:13.5px;color:var(--stone);
     display:flex;align-items:center;gap:10px;
   }
-
-  /* ---------- PHOTOTHERAPY CALLOUT ---------- */
-  .photo-callout{
-    margin-top:54px;
+  .price-bullets{
+    list-style:none;margin-top:14px;
+    display:flex;flex-direction:column;gap:6px;
+  }
+  .price-bullets li{
+    font-size:14px;line-height:1.55;color:#5c5a55;
+    padding-left:14px;position:relative;
+  }
+  .price-bullets li::before{
+    content:"";position:absolute;left:0;top:0.55em;
+    width:5px;height:5px;border-radius:50%;background:var(--stone-light);
+  }
+  .hero-badges{
+    display:flex;flex-wrap:wrap;gap:10px;margin-bottom:22px;
+  }
+  .hero-badge{
+    font-size:11.5px;letter-spacing:0.12em;text-transform:uppercase;font-weight:700;
+    border:1px solid var(--ink);padding:7px 14px;border-radius:999px;
+  }
+  .hero-tech{
+    font-size:13px;line-height:1.7;color:var(--stone);
+    max-width:480px;margin-bottom:18px;
+  }
+  .hero-meta{
+    font-size:13.5px;color:var(--stone);margin-top:22px;
+    display:flex;flex-wrap:wrap;gap:8px 18px;
+  }
+  .section-lead{
+    font-size:16px;line-height:1.7;color:#454440;
+    max-width:640px;margin:-30px 0 48px;
+  }
+  .principle{
+    background:var(--ink);color:var(--paper);
+    padding:90px 0;
+  }
+  .principle .eyebrow{color:var(--stone-light);}
+  .principle h2{
+    font-size:clamp(28px,3.6vw,44px);font-weight:500;line-height:1.15;
+    max-width:720px;margin:14px 0 28px;
+  }
+  .principle p{
+    font-size:16px;line-height:1.75;color:#dedcd6;max-width:620px;margin-bottom:16px;
+  }
+  .principle-flow{
+    display:flex;flex-wrap:wrap;gap:10px;margin:28px 0 8px;
+  }
+  .principle-flow span{
+    font-size:12px;letter-spacing:0.08em;text-transform:uppercase;font-weight:700;
+    border:1px solid rgba(250,249,246,0.28);padding:10px 16px;border-radius:999px;
+  }
+  .complex-card{
     background:var(--paper-2);
+    border:1px solid var(--line);
     border-radius:6px;
-    padding:38px 40px;
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:40px;
+    padding:42px 40px;
+    display:grid;grid-template-columns:1.2fr 0.8fr;gap:40px;align-items:center;
   }
-  .photo-callout h3{font-size:22px;font-weight:500;margin-bottom:12px;display:flex;align-items:center;gap:10px;}
-  .photo-callout p{font-size:14.5px;line-height:1.7;color:#454440;}
-  .photo-checks{list-style:none;display:flex;flex-direction:column;gap:10px;}
-  .photo-checks li{
-    font-size:14px;line-height:1.5;color:#3a3936;
-    display:flex;align-items:flex-start;gap:10px;
+  .complex-card h3{
+    font-size:clamp(26px,3vw,36px);font-weight:500;margin:10px 0 22px;
   }
-  .photo-checks li::before{
-    content:"✓";flex-shrink:0;
-    width:18px;height:18px;border-radius:50%;background:var(--ink);color:var(--paper);
-    font-size:10px;display:flex;align-items:center;justify-content:center;margin-top:2px;
+  .complex-list{
+    list-style:none;display:flex;flex-direction:column;gap:10px;margin-bottom:22px;
   }
+  .complex-list li{
+    font-size:15px;font-weight:600;letter-spacing:0.04em;text-transform:uppercase;
+    display:flex;align-items:center;gap:10px;
+  }
+  .complex-list li::before{
+    content:"";width:6px;height:6px;border-radius:50%;background:var(--ink);flex-shrink:0;
+  }
+  .complex-note{font-size:13.5px;color:var(--stone);line-height:1.6;}
+  .complex-price-box{text-align:right;}
+  .complex-old{
+    font-size:15px;color:var(--stone);text-decoration:line-through;margin-bottom:6px;
+  }
+  .complex-new{
+    font-family:'Cormorant Garamond',serif;
+    font-size:clamp(36px,4vw,52px);font-weight:500;line-height:1;
+  }
+  .complex-save{
+    margin-top:12px;font-size:13px;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;
+  }
+  .pack-grid{
+    display:grid;grid-template-columns:repeat(3,1fr);gap:18px;
+  }
+  .pack-card{
+    border:1px solid var(--line);
+    border-radius:6px;
+    padding:32px 28px;
+    background:var(--white);
+    display:flex;flex-direction:column;gap:10px;
+    position:relative;
+  }
+  .pack-card.featured{
+    background:var(--ink);color:var(--paper);border-color:var(--ink);
+  }
+  .pack-card.featured .pack-old{color:var(--stone-light);}
+  .pack-card.featured .pack-per{color:var(--stone-light);}
+  .pack-badge{
+    align-self:flex-start;
+    font-size:10px;letter-spacing:0.08em;text-transform:uppercase;font-weight:700;
+    background:var(--paper);color:var(--ink);padding:6px 12px;border-radius:999px;
+    margin-bottom:4px;line-height:1.35;max-width:100%;
+  }
+  .pack-name{
+    font-size:13px;letter-spacing:0.14em;text-transform:uppercase;font-weight:700;color:var(--stone);
+  }
+  .pack-card.featured .pack-name{color:var(--stone-light);}
+  .pack-title{font-size:28px;font-weight:500;margin-top:4px;}
+  .pack-old{font-size:14px;color:var(--stone);text-decoration:line-through;}
+  .pack-price{
+    font-family:'Cormorant Garamond',serif;font-size:40px;font-weight:500;line-height:1;
+  }
+  .pack-per{font-size:13.5px;color:var(--stone);margin-top:4px;}
+  .price-subhead{
+    margin:56px 0 28px;
+  }
+  .price-subhead h3{
+    font-size:clamp(24px,2.6vw,32px);font-weight:500;margin-bottom:8px;
+  }
+  .price-subhead p{font-size:14.5px;color:var(--stone);line-height:1.6;max-width:560px;}
+  .why-grid{
+    display:grid;grid-template-columns:repeat(2,1fr);gap:0;
+    border-top:1px solid var(--line);
+  }
+  .why-item{
+    padding:34px 0;
+    border-bottom:1px solid var(--line);
+  }
+  .why-item:nth-child(odd){padding-right:40px;border-right:1px solid var(--line);}
+  .why-item:nth-child(even){padding-left:40px;}
+  .why-item h3{font-size:22px;font-weight:500;margin-bottom:10px;}
+  .why-item p{font-size:15px;line-height:1.7;color:#454440;max-width:420px;}
+  .steps-list{counter-reset:step;border-top:1px solid var(--line);}
+  .step-item{
+    display:grid;grid-template-columns:80px 1fr;gap:24px;
+    padding:28px 0;border-bottom:1px solid var(--line);
+    align-items:baseline;
+  }
+  .step-num{
+    font-family:'Cormorant Garamond',serif;font-size:28px;font-weight:500;color:var(--stone-light);
+  }
+  .step-text{font-size:17px;line-height:1.55;}
+  .visit-band{
+    background:var(--paper-2);
+    padding:90px 0;
+  }
+  .visit-grid{
+    display:grid;grid-template-columns:1.1fr 0.9fr;gap:50px;align-items:end;
+  }
+  .visit-band h2{
+    font-size:clamp(28px,3.4vw,42px);font-weight:500;line-height:1.15;margin:12px 0 22px;
+  }
+  .visit-band p{font-size:15.5px;line-height:1.75;color:#454440;max-width:480px;margin-bottom:10px;}
+  .visit-cta{margin-top:28px;display:flex;flex-wrap:wrap;gap:16px;align-items:center;}
+  .visit-tags{
+    margin-top:22px;display:flex;flex-wrap:wrap;gap:8px;
+  }
+  .visit-tags span{
+    font-size:11px;letter-spacing:0.1em;text-transform:uppercase;font-weight:700;
+    border:1px solid var(--line);padding:7px 12px;border-radius:999px;color:#3a3936;
+  }
+  .visit-aside{
+    background:var(--white);border:1px solid var(--line);border-radius:6px;padding:32px 28px;
+  }
+  .visit-aside .price-amount{display:block;margin:8px 0 4px;}
+  .visit-aside .eyebrow{margin-bottom:8px;}
 
   /* ---------- REVIEWS ---------- */
   .reviews{background:var(--paper-2);}
@@ -699,7 +843,14 @@
     .footer-grid{grid-template-columns:1fr;gap:36px;}
     .price-row{grid-template-columns:1fr;gap:8px;}
     .price-amount{font-size:22px;}
-    .photo-callout{grid-template-columns:1fr;}
+    .complex-card{grid-template-columns:1fr;}
+    .complex-price-box{text-align:left;}
+    .pack-grid{grid-template-columns:1fr;}
+    .why-grid{grid-template-columns:1fr;}
+    .why-item:nth-child(odd){border-right:none;padding-right:0;}
+    .why-item:nth-child(even){padding-left:0;}
+    .visit-grid{grid-template-columns:1fr;}
+    .step-item{grid-template-columns:48px 1fr;gap:14px;}
   }
   @media (max-width:560px){
     .wrap{padding:0 20px;}
@@ -730,9 +881,10 @@
       <img src="assets/logo-black.png" alt="Moldir Sabitkyzy">
     </a>
     <nav class="nav-links">
-      <a href="#about" data-i18n="nav_about">Обо мне</a>
-      <a href="#certs" data-i18n="nav_certs">Сертификаты</a>
+      <a href="#start" data-i18n="nav_start">Старт</a>
+      <a href="#tech" data-i18n="nav_tech">Технологии</a>
       <a href="#price" data-i18n="nav_price">Услуги</a>
+      <a href="#about" data-i18n="nav_about">Обо мне</a>
       <a href="#reviews" data-i18n="nav_reviews">Отзывы</a>
       <a href="#faq" data-i18n="nav_faq">Вопросы</a>
     </nav>
@@ -760,15 +912,24 @@
     <div>
       <div class="hero-eyebrow">
         <span class="dot"></span>
-        <span class="eyebrow" data-i18n="hero_eyebrow">Эстетическая трихология · Актау</span>
+        <span class="eyebrow" data-i18n="hero_eyebrow">Инновационный центр эстетической трихологии</span>
       </div>
-      <h1 class="hero-sub" data-i18n="hero_sub">Трихолог-эстетист</h1>
-      <p class="hero-desc" data-i18n="hero_desc">Моя цель — вернуть вашей коже головы комфорт, а волосам густоту, силу, блеск и красоту.</p>
+      <h1 class="hero-sub" data-i18n="hero_sub">Современный аппаратный уход за&nbsp;волосами и&nbsp;кожей головы</h1>
+      <div class="hero-badges">
+        <span class="hero-badge" data-i18n="hero_badge_1">Без инъекций</span>
+        <span class="hero-badge" data-i18n="hero_badge_2">Без гормонов</span>
+      </div>
+      <p class="hero-tech" data-i18n="hero_tech">Трихоскопическая диагностика · Head SPA · LLLT лазер · Озон · Многофункциональный аппаратный уход</p>
+      <p class="hero-desc" data-i18n="hero_desc">Для каждого клиента программа составляется индивидуально — по состоянию кожи головы и волос.</p>
       <div class="hero-actions">
         <button class="btn-primary" onclick="openQuiz()" data-i18n="hero_cta">
           Записаться на диагностику
         </button>
         <a class="btn-ghost" href="#price" data-i18n="hero_cta_secondary">Смотреть цены</a>
+      </div>
+      <div class="hero-meta">
+        <span data-i18n="hero_city">Актау</span>
+        <span data-i18n="hero_hours">Ежедневно 09:00–18:00</span>
       </div>
     </div>
     <div class="hero-visual">
@@ -785,36 +946,141 @@
   </div>
 </section>
 
+<!-- ============ START: DIAGNOSTICS ============ -->
+<section id="start">
+  <div class="wrap">
+    <div class="section-head">
+      <h2 data-i18n="start_title">С чего начинаем?</h2>
+      <span class="section-num" data-i18n="start_eyebrow">01 · Диагностика</span>
+    </div>
+    <div class="price-table">
+      <div class="price-row">
+        <span class="pidx">01</span>
+        <div class="price-name">
+          <h3 data-i18n="diag_name">Трихоскопическая диагностика</h3>
+          <p class="price-desc" data-i18n="diag_desc">Перед комплексным уходом оцениваем состояние волос и кожи головы с помощью специального трихоскопа.</p>
+          <ul class="price-bullets">
+            <li data-i18n="diag_b1">состояние кожи головы</li>
+            <li data-i18n="diag_b2">волосяные фолликулы</li>
+            <li data-i18n="diag_b3">плотность волос</li>
+            <li data-i18n="diag_b4">уровень жирности</li>
+            <li data-i18n="diag_b5">общее состояние волос</li>
+          </ul>
+          <p class="price-desc" style="margin-top:14px;" data-i18n="diag_result">На основе этих данных составляется индивидуальная эстетическая трихологическая программа.</p>
+        </div>
+        <span class="price-time" data-i18n="diag_time">20–25 минут</span>
+        <span class="price-amount">15 000 ₸</span>
+      </div>
+    </div>
+    <div style="margin-top:34px;">
+      <button class="btn-primary" onclick="openQuiz()" data-i18n="hero_cta">Записаться на диагностику</button>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TECHNOLOGIES ============ -->
+<section id="tech" style="background:var(--paper-2);">
+  <div class="wrap">
+    <div class="section-head">
+      <h2 data-i18n="tech_title">Наши технологии</h2>
+      <span class="section-num" data-i18n="tech_eyebrow">02–05 · Уход</span>
+    </div>
+    <div class="price-table">
+      <div class="price-row">
+        <span class="pidx">02</span>
+        <div class="price-name">
+          <h3 data-i18n="tech_2_name">Head SPA</h3>
+          <p class="price-desc" data-i18n="tech_2_desc">Head SPA — комплексный SPA-уход для кожи головы и волос.</p>
+          <ul class="price-bullets">
+            <li data-i18n="spa_b1">профессиональное мытьё</li>
+            <li data-i18n="spa_b2">специальные средства ухода</li>
+            <li data-i18n="spa_b3">уход водными потоками</li>
+            <li data-i18n="spa_b4">массаж кожи головы</li>
+          </ul>
+          <p class="price-desc" style="margin-top:14px;" data-i18n="tech_2_note">Используется в составе комплексной программы для очищения кожи головы и подготовки к аппаратным этапам.</p>
+        </div>
+        <span class="price-time" data-i18n="tech_2_time">30 минут</span>
+        <span class="price-amount">12 000 ₸</span>
+      </div>
+      <div class="price-row">
+        <span class="pidx">03</span>
+        <div class="price-name">
+          <h3 data-i18n="tech_3_name">LLLT лазерный уход</h3>
+          <p class="price-desc" data-i18n="tech_3_desc">Низкоинтенсивная лазерная технология применяется как часть аппаратной стимуляции волос и кожи головы. Процедура проводится на специальном аппарате по установленному протоколу. Один сеанс — 20 минут.</p>
+        </div>
+        <span class="price-time" data-i18n="tech_3_time">20 минут</span>
+        <span class="price-amount">25 000 ₸</span>
+      </div>
+      <div class="price-row">
+        <span class="pidx">04</span>
+        <div class="price-name">
+          <h3 data-i18n="tech_4_name">Озоновый уход</h3>
+          <p class="price-desc" data-i18n="tech_4_desc">Аппаратный этап ухода за кожей головы. Озоновая процедура включается в индивидуальную программу по результатам трихоскопической оценки и состоянию кожи головы.</p>
+        </div>
+        <span class="price-time">—</span>
+        <span class="price-amount">10 000 ₸</span>
+      </div>
+      <div class="price-row">
+        <span class="pidx">05</span>
+        <div class="price-name">
+          <h3 data-i18n="tech_5_name">Многофункциональный аппарат</h3>
+          <p class="price-desc" data-i18n="tech_5_desc">Современная технология, объединяющая несколько профессиональных режимов ухода в одном аппарате. Программа и рабочий режим подбираются индивидуально по состоянию кожи головы и волос клиента.</p>
+        </div>
+        <span class="price-time">—</span>
+        <span class="price-amount">20 000 ₸</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PRINCIPLE ============ -->
+<section class="principle" id="principle">
+  <div class="wrap">
+    <span class="eyebrow" data-i18n="principle_eyebrow">Наш главный принцип</span>
+    <h2 data-i18n="principle_title">Не разовая процедура — системная программа</h2>
+    <p data-i18n="principle_text_1">Случайные разовые процедуры у нас не являются основным форматом.</p>
+    <p data-i18n="principle_text_2">Сначала проводится трихоскопическая диагностика. Затем по состоянию клиента составляется индивидуальная программа по принципу:</p>
+    <div class="principle-flow">
+      <span data-i18n="principle_f1">Очищение</span>
+      <span data-i18n="principle_f2">Уход</span>
+      <span data-i18n="principle_f3">Аппаратная стимуляция</span>
+      <span data-i18n="principle_f4">Поддержка</span>
+    </div>
+    <p data-i18n="principle_text_3">Точный состав, количество и интервал процедур определяются после диагностики.</p>
+  </div>
+</section>
+
 <!-- ============ PAIN POINTS ============ -->
 <section class="pains" id="pains">
   <div class="wrap">
     <div class="section-head">
-      <h2 data-i18n="pains_title">Я помогу разобраться в причинах и&nbsp;подберу уход, если вас беспокоят:</h2>
+      <h2 data-i18n="pains_title">Кому рекомендуется диагностика?</h2>
     </div>
+    <p class="section-lead" style="color:#bcb9b2;margin-top:-40px;" data-i18n="pains_lead">Если вас беспокоит что-то из этого — рекомендуем начать с трихоскопической диагностики.</p>
     <div class="pain-list">
       <div class="pain-item">
         <span class="pain-num">01</span>
-        <span class="pain-text" data-i18n="pain_1">Зуд, шелушение, перхоть, сухость или избыточная жирность кожи головы</span>
+        <span class="pain-text" data-i18n="pain_1">Чрезмерное выпадение волос</span>
       </div>
       <div class="pain-item">
         <span class="pain-num">02</span>
-        <span class="pain-text" data-i18n="pain_2">Чувство стянутости и обезвоженности кожи, болезненность у корней</span>
+        <span class="pain-text" data-i18n="pain_2">Редение волос</span>
       </div>
       <div class="pain-item">
         <span class="pain-num">03</span>
-        <span class="pain-text" data-i18n="pain_3">Выпадение волос после стресса, болезни или приёма препаратов</span>
+        <span class="pain-text" data-i18n="pain_3">Снижение объёма и плотности</span>
       </div>
       <div class="pain-item">
         <span class="pain-num">04</span>
-        <span class="pain-text" data-i18n="pain_4">Потеря густоты, объёма и качества волос</span>
+        <span class="pain-text" data-i18n="pain_4">Жирность кожи головы</span>
       </div>
       <div class="pain-item">
         <span class="pain-num">05</span>
-        <span class="pain-text" data-i18n="pain_5">Ломкость, сечение и невозможность отрастить длину</span>
+        <span class="pain-text" data-i18n="pain_5">Перхоть</span>
       </div>
       <div class="pain-item">
         <span class="pain-num">06</span>
-        <span class="pain-text" data-i18n="pain_6">Не понимаете, с чем именно связана проблема, и хотите точный диагноз</span>
+        <span class="pain-text" data-i18n="pain_6">Зуд или дискомфорт, изменение общего состояния волос</span>
       </div>
     </div>
   </div>
@@ -884,70 +1150,284 @@
       <h2 data-i18n="price_title">Услуги и стоимость</h2>
       <span class="section-num" data-i18n="price_eyebrow">Прайс-лист</span>
     </div>
-    <div class="price-table">
 
+    <div class="price-table">
       <div class="price-row">
         <span class="pidx">01</span>
         <div class="price-name">
-          <h3 data-i18n="price_1_name">Диагностика под трихоскопом + консультация</h3>
-          <p class="price-desc" data-i18n="price_1_desc"><span class="emoji">🔍</span>Трихоскопия — диагностика состояния кожи головы и волос с помощью специального оборудования.</p>
+          <h3 data-i18n="old_1_name">Диагностика под трихоскопом + консультация</h3>
+          <p class="price-desc" data-i18n="old_1_desc">Трихоскопия — диагностика состояния кожи головы и волос с помощью специального оборудования.</p>
         </div>
         <span class="price-time">—</span>
         <span class="price-amount">5 000 ₸</span>
       </div>
-
       <div class="price-row">
         <span class="pidx">02</span>
         <div class="price-name">
-          <h3 data-i18n="price_6_name">Трихологический пилинг</h3>
-          <p class="price-desc" data-i18n="price_6_desc">Система из 3 шагов: пилинг / эмульсия / маска. Однократно — для профилактики, курсом — при наличии патологии.</p>
+          <h3 data-i18n="old_2_name">Трихологический пилинг</h3>
+          <p class="price-desc" data-i18n="old_2_desc">Система из 3 шагов: пилинг / эмульсия / маска. Однократно — для профилактики, курсом — при наличии патологии.</p>
         </div>
-        <span class="price-time" data-i18n="price_6_time">1 час</span>
+        <span class="price-time" data-i18n="old_2_time">1 час</span>
         <span class="price-amount">20 000 ₸</span>
       </div>
-
       <div class="price-row">
         <span class="pidx">03</span>
         <div class="price-name">
-          <h3 data-i18n="price_4_name">Озонотерапия</h3>
-          <p class="price-desc" data-i18n="price_4_desc"><span class="emoji">💨</span>Улучшает микроциркуляцию кожи головы и создаёт благоприятные условия для здоровья волос.</p>
+          <h3 data-i18n="old_3_name">Озонотерапия</h3>
+          <p class="price-desc" data-i18n="old_3_desc">Улучшает микроциркуляцию кожи головы и создаёт благоприятные условия для здоровья волос.</p>
         </div>
-        <span class="price-time" data-i18n="price_4_time">40 минут</span>
+        <span class="price-time" data-i18n="old_3_time">40 минут</span>
         <span class="price-amount">15 000 ₸</span>
       </div>
-
       <div class="price-row">
         <span class="pidx">04</span>
         <div class="price-name">
-          <h3 data-i18n="price_3_name">Массажный шлем</h3>
-          <p class="price-desc" data-i18n="price_3_desc"><span class="emoji">💆‍♀️</span>Улучшает кровообращение кожи головы, расслабляет и усиливает действие уходовых процедур.</p>
+          <h3 data-i18n="old_4_name">Массажный шлем</h3>
+          <p class="price-desc" data-i18n="old_4_desc">Улучшает кровообращение кожи головы, расслабляет и усиливает действие уходовых процедур.</p>
         </div>
-        <span class="price-time" data-i18n="price_3_time">15 минут</span>
+        <span class="price-time" data-i18n="old_4_time">15 минут</span>
         <span class="price-amount">12 000 ₸</span>
       </div>
-
       <div class="price-row">
         <span class="pidx">05</span>
         <div class="price-name">
-          <h3 data-i18n="price_2_name">Лазерный шлем</h3>
-          <p class="price-desc" data-i18n="price_2_desc"><span class="emoji">🔴</span>Воздействует низкоинтенсивным лазером на кожу головы, стимулируя волосяные фолликулы.</p>
+          <h3 data-i18n="old_5_name">Лазерный шлем</h3>
+          <p class="price-desc" data-i18n="old_5_desc">Воздействует низкоинтенсивным лазером на кожу головы, стимулируя волосяные фолликулы.</p>
         </div>
-        <span class="price-time" data-i18n="price_2_time">20 минут</span>
+        <span class="price-time" data-i18n="old_5_time">20 минут</span>
         <span class="price-amount">10 000 ₸</span>
       </div>
-
       <div class="price-row">
         <span class="pidx">06</span>
         <div class="price-name">
-          <h3 data-i18n="price_5_name">Фототерапия</h3>
-          <p class="price-desc" data-i18n="price_5_desc"><span class="emoji">💡</span>Воздействие световыми волнами на кожу головы при псориазе — снимает воспаление, зуд и шелушение.</p>
+          <h3 data-i18n="old_6_name">Фототерапия</h3>
+          <p class="price-desc" data-i18n="old_6_desc">Воздействие световыми волнами на кожу головы при псориазе — снимает воспаление, зуд и шелушение.</p>
         </div>
         <span class="price-time">—</span>
         <span class="price-amount">8 000 ₸</span>
       </div>
-
     </div>
-    <p class="price-note" data-i18n="price_note">Точную программу и количество процедур определяем после диагностики под трихоскопом.</p>
+    <p class="price-note" data-i18n="old_price_note">Точную программу и количество процедур определяем после диагностики под трихоскопом.</p>
+
+    <div class="price-subhead">
+      <h3 data-i18n="price_new_title">Стоимость услуг программы</h3>
+      <p data-i18n="price_new_lead">Услуги системной эстетической трихологии — диагностика, Head SPA и аппаратный уход.</p>
+    </div>
+    <div class="price-table">
+      <div class="price-row">
+        <span class="pidx">01</span>
+        <div class="price-name">
+          <h3 data-i18n="price_1_name">Трихоскопическая диагностика + консультация</h3>
+          <p class="price-desc" data-i18n="diag_desc">Перед комплексным уходом оцениваем состояние волос и кожи головы с помощью специального трихоскопа.</p>
+          <ul class="price-bullets">
+            <li data-i18n="diag_b1">состояние кожи головы</li>
+            <li data-i18n="diag_b2">волосяные фолликулы</li>
+            <li data-i18n="diag_b3">плотность волос</li>
+            <li data-i18n="diag_b4">уровень жирности</li>
+            <li data-i18n="diag_b5">общее состояние волос</li>
+          </ul>
+          <p class="price-desc" style="margin-top:14px;" data-i18n="diag_result">На основе этих данных составляется индивидуальная эстетическая трихологическая программа.</p>
+        </div>
+        <span class="price-time" data-i18n="diag_time">20–25 минут</span>
+        <span class="price-amount">15 000 ₸</span>
+      </div>
+      <div class="price-row">
+        <span class="pidx">02</span>
+        <div class="price-name">
+          <h3 data-i18n="tech_2_name">Head SPA</h3>
+          <p class="price-desc" data-i18n="tech_2_desc">Head SPA — комплексный SPA-уход для кожи головы и волос.</p>
+          <ul class="price-bullets">
+            <li data-i18n="spa_b1">профессиональное мытьё</li>
+            <li data-i18n="spa_b2">специальные средства ухода</li>
+            <li data-i18n="spa_b3">уход водными потоками</li>
+            <li data-i18n="spa_b4">массаж кожи головы</li>
+          </ul>
+          <p class="price-desc" style="margin-top:14px;" data-i18n="tech_2_note">Используется в составе комплексной программы для очищения кожи головы и подготовки к аппаратным этапам.</p>
+        </div>
+        <span class="price-time" data-i18n="tech_2_time">30 минут</span>
+        <span class="price-amount">12 000 ₸</span>
+      </div>
+      <div class="price-row">
+        <span class="pidx">03</span>
+        <div class="price-name">
+          <h3 data-i18n="price_lllt_name">LLLT лазер</h3>
+          <p class="price-desc" data-i18n="tech_3_desc">Низкоинтенсивная лазерная технология применяется как часть аппаратной стимуляции волос и кожи головы. Процедура проводится на специальном аппарате по установленному протоколу. Один сеанс — 20 минут.</p>
+        </div>
+        <span class="price-time" data-i18n="tech_3_time">20 минут</span>
+        <span class="price-amount">25 000 ₸</span>
+      </div>
+      <div class="price-row">
+        <span class="pidx">04</span>
+        <div class="price-name">
+          <h3 data-i18n="tech_4_name">Озоновый уход</h3>
+          <p class="price-desc" data-i18n="tech_4_desc">Аппаратный этап ухода за кожей головы. Озоновая процедура включается в индивидуальную программу по результатам трихоскопической оценки и состоянию кожи головы.</p>
+        </div>
+        <span class="price-time">—</span>
+        <span class="price-amount">10 000 ₸</span>
+      </div>
+      <div class="price-row">
+        <span class="pidx">05</span>
+        <div class="price-name">
+          <h3 data-i18n="price_multi_name">Многофункциональный аппаратный уход</h3>
+          <p class="price-desc" data-i18n="tech_5_desc">Современная технология, объединяющая несколько профессиональных режимов ухода в одном аппарате. Программа и рабочий режим подбираются индивидуально по состоянию кожи головы и волос клиента.</p>
+        </div>
+        <span class="price-time">—</span>
+        <span class="price-amount">20 000 ₸</span>
+      </div>
+    </div>
+    <p class="price-note" data-i18n="price_sum">Head SPA + LLLT + Озон + Многофункциональный аппарат — индивидуально рассчитанная сумма: 67 000 ₸</p>
+  </div>
+</section>
+
+<!-- ============ COMPLEX ============ -->
+<section id="complex" style="padding-top:0;">
+  <div class="wrap">
+    <div class="section-head">
+      <h2 data-i18n="complex_title">Комплексная программа</h2>
+      <span class="section-num" data-i18n="complex_eyebrow">Специальная цена</span>
+    </div>
+    <p class="section-lead" data-i18n="complex_lead">Когда несколько технологий объединяются в одну системную программу, действует специальная комплексная цена.</p>
+    <div class="complex-card">
+      <div>
+        <span class="eyebrow">FULL TRICHO COMPLEX</span>
+        <h3 data-i18n="complex_name">Полный трихологический комплекс</h3>
+        <ul class="complex-list">
+          <li>Head SPA</li>
+          <li data-i18n="complex_i2">LLLT лазер</li>
+          <li data-i18n="complex_i3">Озон</li>
+          <li data-i18n="complex_i4">Многофункциональный аппарат</li>
+        </ul>
+        <p class="complex-note" data-i18n="complex_note">Точный состав комплекса может меняться по результатам диагностики.</p>
+      </div>
+      <div class="complex-price-box">
+        <div class="complex-old" data-i18n="complex_old">Индивидуально: 67 000 ₸</div>
+        <div class="complex-new">55 000 ₸</div>
+        <div class="complex-save" data-i18n="complex_save">Экономия — 12 000 ₸</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PACKAGES ============ -->
+<section id="packs" style="background:var(--paper-2);">
+  <div class="wrap">
+    <div class="section-head">
+      <h2 data-i18n="packs_title">Абонементные программы</h2>
+      <span class="section-num" data-i18n="packs_eyebrow">Курсы</span>
+    </div>
+    <div class="pack-grid">
+      <div class="pack-card">
+        <span class="pack-name">START</span>
+        <div class="pack-title" data-i18n="pack_1_title">4 комплекса</div>
+        <div class="pack-old" data-i18n="pack_1_old">По отдельности: 268 000 ₸</div>
+        <div class="pack-price">200 000 ₸</div>
+        <div class="pack-per" data-i18n="pack_1_per">1 комплекс — 50 000 ₸</div>
+      </div>
+      <div class="pack-card">
+        <span class="pack-name">INTENSIVE</span>
+        <div class="pack-title" data-i18n="pack_2_title">8 комплексов</div>
+        <div class="pack-old" data-i18n="pack_2_old">По отдельности: 536 000 ₸</div>
+        <div class="pack-price">380 000 ₸</div>
+        <div class="pack-per" data-i18n="pack_2_per">1 комплекс — 47 500 ₸</div>
+      </div>
+      <div class="pack-card featured">
+        <span class="pack-badge" data-i18n="pack_best">Самый выгодный формат</span>
+        <span class="pack-name">PREMIUM COURSE</span>
+        <div class="pack-title" data-i18n="pack_3_title">10 комплексов</div>
+        <div class="pack-old" data-i18n="pack_3_old">По отдельности: 670 000 ₸</div>
+        <div class="pack-price">450 000 ₸</div>
+        <div class="pack-per" data-i18n="pack_3_per">1 комплекс — 45 000 ₸</div>
+      </div>
+    </div>
+    <p class="price-note" data-i18n="packs_note">Объём курса не назначается автоматически. Нужное количество процедур и их комбинация определяются индивидуально после трихоскопической диагностики.</p>
+  </div>
+</section>
+
+<!-- ============ WHY US ============ -->
+<section id="why">
+  <div class="wrap">
+    <div class="section-head">
+      <h2 data-i18n="why_title">Почему мы?</h2>
+      <span class="section-num" data-i18n="why_eyebrow">Подход</span>
+    </div>
+    <div class="why-grid">
+      <div class="why-item">
+        <h3 data-i18n="why_1_title">Подход на основе диагностики</h3>
+        <p data-i18n="why_1_text">Не одна процедура для всех. Каждому клиенту — индивидуальная программа.</p>
+      </div>
+      <div class="why-item">
+        <h3 data-i18n="why_2_title">Современные аппараты</h3>
+        <p data-i18n="why_2_text">Несколько аппаратных технологий в одном центре.</p>
+      </div>
+      <div class="why-item">
+        <h3 data-i18n="why_3_title">Системный уход</h3>
+        <p data-i18n="why_3_text">Приоритет курсовому и контролируемому подходу, а не разовой процедуре.</p>
+      </div>
+      <div class="why-item">
+        <h3 data-i18n="why_4_title">Без инъекций. Без гормонов.</h3>
+        <p data-i18n="why_4_text">Эстетическая трихология и аппаратный уход.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ HOW TO START ============ -->
+<section id="howto" style="background:var(--paper-2);">
+  <div class="wrap">
+    <div class="section-head">
+      <h2 data-i18n="howto_title">Как начать?</h2>
+      <span class="section-num" data-i18n="howto_eyebrow">5 шагов</span>
+    </div>
+    <div class="steps-list">
+      <div class="step-item">
+        <span class="step-num">01</span>
+        <span class="step-text" data-i18n="howto_1">Записываетесь на диагностику</span>
+      </div>
+      <div class="step-item">
+        <span class="step-num">02</span>
+        <span class="step-text" data-i18n="howto_2">Проходите трихоскопическую оценку</span>
+      </div>
+      <div class="step-item">
+        <span class="step-num">03</span>
+        <span class="step-text" data-i18n="howto_3">Составляется индивидуальная программа</span>
+      </div>
+      <div class="step-item">
+        <span class="step-num">04</span>
+        <span class="step-text" data-i18n="howto_4">Начинается курс комплексного ухода</span>
+      </div>
+      <div class="step-item">
+        <span class="step-num">05</span>
+        <span class="step-text" data-i18n="howto_5">Динамика оценивается под контролем</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ VISIT CTA ============ -->
+<section class="visit-band" id="visit">
+  <div class="wrap visit-grid">
+    <div>
+      <span class="eyebrow" data-i18n="visit_eyebrow">Ждём вас</span>
+      <h2 data-i18n="visit_title">Инновационный центр эстетической трихологии</h2>
+      <p data-i18n="visit_addr">г. Актау, 41 мкр, дом 21<br>ЖК «Manhattan», 1 этаж</p>
+      <p data-i18n="visit_enter">Вход — с задней стороны дома, со стороны аллеи.</p>
+      <p data-i18n="visit_hours">Режим работы: ежедневно 09:00–18:00</p>
+      <div class="visit-tags">
+        <span data-i18n="hero_badge_1">Без инъекций</span>
+        <span data-i18n="hero_badge_2">Без гормонов</span>
+        <span data-i18n="visit_tag_3">Индивидуальная программа</span>
+        <span data-i18n="visit_tag_4">Системный уход</span>
+      </div>
+      <div class="visit-cta">
+        <button class="btn-primary" onclick="openQuiz()" data-i18n="hero_cta">Записаться на диагностику</button>
+      </div>
+    </div>
+    <div class="visit-aside">
+      <span class="eyebrow" data-i18n="visit_aside_eyebrow">Первый шаг</span>
+      <h3 style="font-size:24px;font-weight:500;margin-bottom:8px;" data-i18n="visit_aside_title">Трихоскопическая диагностика</h3>
+      <span class="price-amount">15 000 ₸</span>
+      <p style="font-size:14px;color:var(--stone);margin-top:6px;" data-i18n="diag_time">20–25 минут</p>
+    </div>
   </div>
 </section>
 
@@ -1035,18 +1515,20 @@
         <div class="footer-logo">
           <img src="assets/logo-white.jpg" alt="Moldir Sabitkyzy" style="height:60px;border-radius:4px;">
         </div>
-        <p style="max-width:280px;color:#bcb9b2;" data-i18n="footer_desc">Трихолог-эстетист. Диагностика и восстановление волос и кожи головы.</p>
+        <p style="max-width:280px;color:#bcb9b2;" data-i18n="footer_desc">Инновационный центр эстетической трихологии. Аппаратный уход за волосами и кожей головы.</p>
       </div>
       <div class="footer-col">
         <h4 data-i18n="footer_contact">Связь</h4>
         <a href="https://wa.me/77059708866" target="_blank" rel="noopener">WhatsApp: +7 705 970 8866</a>
         <a href="tel:+77059708866" data-i18n="footer_call">Позвонить</a>
+        <a href="#visit" data-i18n="footer_address_short">Актау, 41 мкр, д. 21</a>
       </div>
       <div class="footer-col">
         <h4 data-i18n="footer_nav">Навигация</h4>
-        <a href="#about" data-i18n="nav_about">Обо мне</a>
-        <a href="#certs" data-i18n="nav_certs">Сертификаты</a>
+        <a href="#start" data-i18n="nav_start">Старт</a>
+        <a href="#tech" data-i18n="nav_tech">Технологии</a>
         <a href="#price" data-i18n="nav_price">Услуги</a>
+        <a href="#about" data-i18n="nav_about">Обо мне</a>
         <a href="#reviews" data-i18n="nav_reviews">Отзывы</a>
         <a href="#faq" data-i18n="nav_faq">Вопросы</a>
       </div>
@@ -1168,24 +1650,69 @@
   // ===================== I18N =====================
   const translations = {
     ru: {
+      nav_start: "Старт",
+      nav_tech: "Технологии",
       nav_about: "Обо мне",
       nav_certs: "Сертификаты",
       nav_price: "Услуги",
       nav_reviews: "Отзывы",
       nav_faq: "Вопросы",
-      hero_eyebrow: "Эстетическая трихология · Актау",
-      hero_sub: "Трихолог-эстетист",
-      hero_desc: "Моя цель — вернуть вашей коже головы комфорт, а волосам густоту, силу, блеск и красоту.",
+      hero_eyebrow: "Инновационный центр эстетической трихологии",
+      hero_sub: "Современный аппаратный уход за&nbsp;волосами и&nbsp;кожей головы",
+      hero_badge_1: "Без инъекций",
+      hero_badge_2: "Без гормонов",
+      hero_tech: "Трихоскопическая диагностика · Head SPA · LLLT лазер · Озон · Многофункциональный аппаратный уход",
+      hero_desc: "Для каждого клиента программа составляется индивидуально — по состоянию кожи головы и волос.",
       hero_cta: "Записаться на диагностику",
       hero_cta_secondary: "Смотреть цены",
+      hero_city: "Актау",
+      hero_hours: "Ежедневно 09:00–18:00",
       hero_lens_label: "диагностика кожи головы",
-      pains_title: "Я помогу разобраться в причинах и&nbsp;подберу уход, если вас беспокоят:",
-      pain_1: "Зуд, шелушение, перхоть, сухость или избыточная жирность кожи головы",
-      pain_2: "Чувство стянутости и обезвоженности кожи, болезненность у корней",
-      pain_3: "Выпадение волос после стресса, болезни или приёма препаратов",
-      pain_4: "Потеря густоты, объёма и качества волос",
-      pain_5: "Ломкость, сечение и невозможность отрастить длину",
-      pain_6: "Не понимаете, с чем именно связана проблема, и хотите точный диагноз",
+      start_title: "С чего начинаем?",
+      start_eyebrow: "01 · Диагностика",
+      diag_name: "Трихоскопическая диагностика",
+      diag_desc: "Перед комплексным уходом оцениваем состояние волос и кожи головы с помощью специального трихоскопа.",
+      diag_b1: "состояние кожи головы",
+      diag_b2: "волосяные фолликулы",
+      diag_b3: "плотность волос",
+      diag_b4: "уровень жирности",
+      diag_b5: "общее состояние волос",
+      diag_result: "На основе этих данных составляется индивидуальная эстетическая трихологическая программа.",
+      diag_time: "20–25 минут",
+      tech_title: "Наши технологии",
+      tech_eyebrow: "02–05 · Уход",
+      tech_2_name: "Head SPA",
+      tech_2_desc: "Head SPA — комплексный SPA-уход для кожи головы и волос.",
+      spa_b1: "профессиональное мытьё",
+      spa_b2: "специальные средства ухода",
+      spa_b3: "уход водными потоками",
+      spa_b4: "массаж кожи головы",
+      tech_2_note: "Используется в составе комплексной программы для очищения кожи головы и подготовки к аппаратным этапам.",
+      tech_2_time: "30 минут",
+      tech_3_name: "LLLT лазерный уход",
+      tech_3_desc: "Низкоинтенсивная лазерная технология применяется как часть аппаратной стимуляции волос и кожи головы. Процедура проводится на специальном аппарате по установленному протоколу. Один сеанс — 20 минут.",
+      tech_3_time: "20 минут",
+      tech_4_name: "Озоновый уход",
+      tech_4_desc: "Аппаратный этап ухода за кожей головы. Озоновая процедура включается в индивидуальную программу по результатам трихоскопической оценки и состоянию кожи головы.",
+      tech_5_name: "Многофункциональный аппарат",
+      tech_5_desc: "Современная технология, объединяющая несколько профессиональных режимов ухода в одном аппарате. Программа и рабочий режим подбираются индивидуально по состоянию кожи головы и волос клиента.",
+      principle_eyebrow: "Наш главный принцип",
+      principle_title: "Не разовая процедура — системная программа",
+      principle_text_1: "Случайные разовые процедуры у нас не являются основным форматом.",
+      principle_text_2: "Сначала проводится трихоскопическая диагностика. Затем по состоянию клиента составляется индивидуальная программа по принципу:",
+      principle_f1: "Очищение",
+      principle_f2: "Уход",
+      principle_f3: "Аппаратная стимуляция",
+      principle_f4: "Поддержка",
+      principle_text_3: "Точный состав, количество и интервал процедур определяются после диагностики.",
+      pains_title: "Кому рекомендуется диагностика?",
+      pains_lead: "Если вас беспокоит что-то из этого — рекомендуем начать с трихоскопической диагностики.",
+      pain_1: "Чрезмерное выпадение волос",
+      pain_2: "Редение волос",
+      pain_3: "Снижение объёма и плотности",
+      pain_4: "Жирность кожи головы",
+      pain_5: "Перхоть",
+      pain_6: "Зуд или дискомфорт, изменение общего состояния волос",
       about_title: "Мои компетенции<br>и принципы работы",
       about_eyebrow: "Обо мне",
       about_1_title: "Опыт и насмотренность",
@@ -1202,29 +1729,78 @@
       certs_text: "В данном разделе представлены мои сертификаты и документы, подтверждающие прохождение обучения и повышение квалификации в сфере трихологии и эстетического ухода за кожей головы и волосами. Я регулярно совершенствую свои знания и навыки, изучая современные методы диагностики и ухода за волосами и кожей головы.",
       price_title: "Услуги и стоимость",
       price_eyebrow: "Прайс-лист",
-      price_1_name: "Диагностика под трихоскопом + консультация",
-      price_1_desc: "<span class='emoji'>🔍</span>Трихоскопия — диагностика состояния кожи головы и волос с помощью специального оборудования.",
-      price_2_name: "Лазерный шлем",
-      price_2_desc: "<span class='emoji'>🔴</span>Воздействует низкоинтенсивным лазером на кожу головы, стимулируя волосяные фолликулы.",
-      price_2_time: "20 минут",
-      price_3_name: "Массажный шлем",
-      price_3_desc: "<span class='emoji'>💆‍♀️</span>Улучшает кровообращение кожи головы, расслабляет и усиливает действие уходовых процедур.",
-      price_3_time: "15 минут",
-      price_4_name: "Озонотерапия",
-      price_4_desc: "<span class='emoji'>💨</span>Улучшает микроциркуляцию кожи головы и создаёт благоприятные условия для здоровья волос.",
-      price_4_time: "40 минут",
-      price_5_name: "Фототерапия",
-      price_5_desc: "<span class='emoji'>💡</span>Воздействие световыми волнами на кожу головы при псориазе — снимает воспаление, зуд и шелушение.",
-      price_6_name: "Трихологический пилинг",
-      price_6_desc: "Система из 3 шагов: пилинг / эмульсия / маска. Однократно — для профилактики, курсом — при наличии патологии.",
-      price_6_time: "1 час",
-      price_note: "Точную программу и количество процедур определяем после диагностики под трихоскопом.",
-      photo_title: "Фототерапия при псориазе кожи головы",
-      photo_text: "Метод воздействия световыми волнами определённой длины на поражённые участки кожи. Помогает уменьшить воспаление, зуд и шелушение, продлевает период ремиссии. Рекомендуется в составе комплексного ухода и по индивидуальному плану.",
-      photo_check_1: "Уменьшает покраснение и воспаление",
-      photo_check_2: "Снижает зуд и дискомфорт",
-      photo_check_3: "Уменьшает шелушение",
-      photo_check_4: "Поддерживает восстановление кожи",
+      old_1_name: "Диагностика под трихоскопом + консультация",
+      old_1_desc: "Трихоскопия — диагностика состояния кожи головы и волос с помощью специального оборудования.",
+      old_2_name: "Трихологический пилинг",
+      old_2_desc: "Система из 3 шагов: пилинг / эмульсия / маска. Однократно — для профилактики, курсом — при наличии патологии.",
+      old_2_time: "1 час",
+      old_3_name: "Озонотерапия",
+      old_3_desc: "Улучшает микроциркуляцию кожи головы и создаёт благоприятные условия для здоровья волос.",
+      old_3_time: "40 минут",
+      old_4_name: "Массажный шлем",
+      old_4_desc: "Улучшает кровообращение кожи головы, расслабляет и усиливает действие уходовых процедур.",
+      old_4_time: "15 минут",
+      old_5_name: "Лазерный шлем",
+      old_5_desc: "Воздействует низкоинтенсивным лазером на кожу головы, стимулируя волосяные фолликулы.",
+      old_5_time: "20 минут",
+      old_6_name: "Фототерапия",
+      old_6_desc: "Воздействие световыми волнами на кожу головы при псориазе — снимает воспаление, зуд и шелушение.",
+      old_price_note: "Точную программу и количество процедур определяем после диагностики под трихоскопом.",
+      price_new_title: "Стоимость услуг программы",
+      price_new_lead: "Услуги системной эстетической трихологии — диагностика, Head SPA и аппаратный уход.",
+      price_1_name: "Трихоскопическая диагностика + консультация",
+      price_lllt_name: "LLLT лазер",
+      price_multi_name: "Многофункциональный аппаратный уход",
+      price_sum: "Head SPA + LLLT + Озон + Многофункциональный аппарат — индивидуально рассчитанная сумма: 67 000 ₸",
+      complex_title: "Комплексная программа",
+      complex_eyebrow: "Специальная цена",
+      complex_lead: "Когда несколько технологий объединяются в одну системную программу, действует специальная комплексная цена.",
+      complex_name: "Полный трихологический комплекс",
+      complex_i2: "LLLT лазер",
+      complex_i3: "Озон",
+      complex_i4: "Многофункциональный аппарат",
+      complex_note: "Точный состав комплекса может меняться по результатам диагностики.",
+      complex_old: "Индивидуально: 67 000 ₸",
+      complex_save: "Экономия — 12 000 ₸",
+      packs_title: "Абонементные программы",
+      packs_eyebrow: "Курсы",
+      pack_1_title: "4 комплекса",
+      pack_1_old: "По отдельности: 268 000 ₸",
+      pack_1_per: "1 комплекс — 50 000 ₸",
+      pack_2_title: "8 комплексов",
+      pack_2_old: "По отдельности: 536 000 ₸",
+      pack_2_per: "1 комплекс — 47 500 ₸",
+      pack_3_title: "10 комплексов",
+      pack_3_old: "По отдельности: 670 000 ₸",
+      pack_3_per: "1 комплекс — 45 000 ₸",
+      pack_best: "Самый выгодный формат",
+      packs_note: "Объём курса не назначается автоматически. Нужное количество процедур и их комбинация определяются индивидуально после трихоскопической диагностики.",
+      why_title: "Почему мы?",
+      why_eyebrow: "Подход",
+      why_1_title: "Подход на основе диагностики",
+      why_1_text: "Не одна процедура для всех. Каждому клиенту — индивидуальная программа.",
+      why_2_title: "Современные аппараты",
+      why_2_text: "Несколько аппаратных технологий в одном центре.",
+      why_3_title: "Системный уход",
+      why_3_text: "Приоритет курсовому и контролируемому подходу, а не разовой процедуре.",
+      why_4_title: "Без инъекций. Без гормонов.",
+      why_4_text: "Эстетическая трихология и аппаратный уход.",
+      howto_title: "Как начать?",
+      howto_eyebrow: "5 шагов",
+      howto_1: "Записываетесь на диагностику",
+      howto_2: "Проходите трихоскопическую оценку",
+      howto_3: "Составляется индивидуальная программа",
+      howto_4: "Начинается курс комплексного ухода",
+      howto_5: "Динамика оценивается под контролем",
+      visit_eyebrow: "Ждём вас",
+      visit_title: "Инновационный центр эстетической трихологии",
+      visit_addr: "г. Актау, 41 мкр, дом 21<br>ЖК «Manhattan», 1 этаж",
+      visit_enter: "Вход — с задней стороны дома, со стороны аллеи.",
+      visit_hours: "Режим работы: ежедневно 09:00–18:00",
+      visit_tag_3: "Индивидуальная программа",
+      visit_tag_4: "Системный уход",
+      visit_aside_eyebrow: "Первый шаг",
+      visit_aside_title: "Трихоскопическая диагностика",
       reviews_eyebrow: "Отзывы клиентов",
       reviews_title: "Что говорят те, кто уже прошёл курс",
       reviews_text: "Реальная переписка с клиентами — до и после ухода.",
@@ -1243,10 +1819,11 @@
       faq_2_a: "Первые улучшения (снижение выпадения, уход зуда и дискомфорта) вы увидите уже через месяц — это гарантировано. Окончательные результаты индивидуальны: у кого-то уйдёт месяц, у кого-то полгода или год. Мы не используем гормоны, поэтому требуется время и ваше терпение.",
       faq_3_q: "Можно ли остановить АГА (андрогенетическую алопецию)?",
       faq_3_a: "АГА — это не приговор. Выпадение можно остановить и восстановить волосы, но подход должен быть комплексным, системным и длительным. Это должно стать вашей рутиной, как чистка зубов. На протяжении всего курса я всегда буду на связи, чтобы консультировать и сопровождать вас.",
-      footer_desc: "Трихолог-эстетист. Диагностика и восстановление волос и кожи головы.",
+      footer_desc: "Инновационный центр эстетической трихологии. Аппаратный уход за волосами и кожей головы.",
       footer_contact: "Связь",
       footer_call: "Позвонить",
       footer_nav: "Навигация",
+      footer_address_short: "Актау, 41 мкр, д. 21",
       footer_disclaimer: "Не является медицинской услугой",
       q1_title: "Что вас беспокоит больше всего?",
       q1_o1: "Выпадение волос",
@@ -1287,24 +1864,69 @@
       wa_greeting: "Здравствуйте! Я прошла(ел) анкету на сайте."
     },
     kk: {
+      nav_start: "Бастау",
+      nav_tech: "Технологиялар",
       nav_about: "Мен туралы",
       nav_certs: "Сертификаттар",
       nav_price: "Қызметтер",
       nav_reviews: "Пікірлер",
       nav_faq: "Сұрақтар",
-      hero_eyebrow: "Эстетикалық трихология · Ақтау",
-      hero_sub: "Трихолог-эстетист",
-      hero_desc: "Менің мақсатым — бас терісіне жайлылық, шашқа қалыңдық, күш, жылтыр мен сұлулық қайтару.",
+      hero_eyebrow: "Инновациялық эстетикалық трихология орталығы",
+      hero_sub: "Шаш пен бас терісіне заманауи аппараттық күтім",
+      hero_badge_1: "Инъекциясыз",
+      hero_badge_2: "Гормонсыз",
+      hero_tech: "Трихоскопиялық диагностика · Head SPA · LLLT лазер · Озон · Көпфункционалды аппараттық күтім",
+      hero_desc: "Әр клиентке бағдарлама бас терісі мен шаштың жағдайына қарай жеке құрылады.",
       hero_cta: "Диагностикаға жазылу",
       hero_cta_secondary: "Бағаларды көру",
+      hero_city: "Ақтау қаласы",
+      hero_hours: "Күн сайын 09:00–18:00",
       hero_lens_label: "бас терісінің диагностикасы",
-      pains_title: "Сізді мыналар мазалайтын болса, себебін анықтап, күтім таңдап беремін:",
-      pain_1: "Қышу, қабыршақтану, кебек, бас терісінің құрғақтығы немесе майлылығы",
-      pain_2: "Терінің тартылу және сусыздану сезімі, түбірдегі ауырсыну",
-      pain_3: "Стресстен, аурудан немесе препараттардан кейінгі шаш түсуі",
-      pain_4: "Шаштың қалыңдығы мен көлемінің, сапасының төмендеуі",
-      pain_5: "Шаштың сынғыштығы, ұшының қиылуы және ұзаруының тоқтауы",
-      pain_6: "Мәселенің нақты себебін білмейсіз және дәл диагноз қойғыңыз келеді",
+      start_title: "Неден бастаймыз?",
+      start_eyebrow: "01 · Диагностика",
+      diag_name: "Трихоскопиялық диагностика",
+      diag_desc: "Кешенді күтімді бастамас бұрын шаш пен бас терісінің жағдайын арнайы трихоскоп арқылы бағалаймыз.",
+      diag_b1: "бас терісінің жағдайы",
+      diag_b2: "шаш фолликулдары",
+      diag_b3: "шаштың тығыздығы",
+      diag_b4: "майлылық деңгейі",
+      diag_b5: "шаштың жалпы жағдайы",
+      diag_result: "Осы мәліметтердің негізінде сізге жеке эстетикалық трихологиялық бағдарлама құрылады.",
+      diag_time: "20–25 минут",
+      tech_title: "Біздің технологиялар",
+      tech_eyebrow: "02–05 · Күтім",
+      tech_2_name: "Head SPA",
+      tech_2_desc: "Head SPA — бас терісі мен шашқа арналған кешенді SPA-күтім.",
+      spa_b1: "кәсіби жуу",
+      spa_b2: "арнайы күтім құралдары",
+      spa_b3: "су ағындарымен күтім",
+      spa_b4: "бас терісіне массаж",
+      tech_2_note: "Бас терісін тазарту және келесі аппараттық кезеңдерге дайындау үшін кешенді бағдарлама құрамында қолданылады.",
+      tech_2_time: "30 минут",
+      tech_3_name: "LLLT лазерлік күтім",
+      tech_3_desc: "Төмен қарқынды лазерлік технология шаш пен бас терісіне арналған аппараттық стимуляция бағдарламасының бір бөлігі ретінде қолданылады. Процедура арнайы аппарат арқылы белгіленген протокол бойынша жүргізіледі. Бір сеанс — 20 минут.",
+      tech_3_time: "20 минут",
+      tech_4_name: "Озонды күтім",
+      tech_4_desc: "Бас терісіне арналған аппараттық күтім кезеңі. Озон процедурасы жеке бағдарламаға трихоскопиялық бағалау нәтижесіне және бас терісінің жағдайына қарай енгізіледі.",
+      tech_5_name: "Көпфункционалды аппарат",
+      tech_5_desc: "Бір аппаратта бірнеше кәсіби күтім мүмкіндігін біріктіретін заманауи технология. Бағдарлама мен жұмыс режимі әр клиенттің бас терісі мен шашының жағдайына қарай жеке таңдалады.",
+      principle_eyebrow: "Біздің негізгі принцип",
+      principle_title: "Бір реттік процедура емес — жүйелі бағдарлама",
+      principle_text_1: "Бізде негізгі формат ретінде кездейсоқ бір реттік процедуралар қарастырылмайды.",
+      principle_text_2: "Алдымен трихоскопиялық диагностика жүргізіледі. Одан кейін клиенттің жағдайына қарай жеке бағдарлама құрылады:",
+      principle_f1: "Тазарту",
+      principle_f2: "Күтім",
+      principle_f3: "Аппараттық стимуляция",
+      principle_f4: "Қолдау",
+      principle_text_3: "Процедуралардың нақты құрамы, саны және аралығы диагностикадан кейін анықталады.",
+      pains_title: "Кімдерге диагностика ұсынылады?",
+      pains_lead: "Егер сізді мыналар мазаласа — алдымен трихоскопиялық диагностикадан бастауды ұсынамыз.",
+      pain_1: "Шаштың шамадан тыс түсуі",
+      pain_2: "Шаштың сиреуі",
+      pain_3: "Көлем мен тығыздықтың азаюы",
+      pain_4: "Бас терісінің майлануы",
+      pain_5: "Қайызғақ",
+      pain_6: "Қышу немесе дискомфорт, шаштың жалпы жағдайының өзгеруі",
       about_title: "Менің құзыреттілігім<br>және жұмыс принциптерім",
       about_eyebrow: "Мен туралы",
       about_1_title: "Тәжірибе және білік",
@@ -1321,29 +1943,78 @@
       certs_text: "Бұл бөлімде трихология және бас терісі мен шашқа эстетикалық күтім саласында оқудан өтуімді және біліктілігімді арттыруымды растайтын сертификаттар мен құжаттар берілген. Мен шаш пен бас терісін диагностикалаудың және күтудің заманауи әдістерін үйрене отырып, білімім мен дағдыларымды үнемі жетілдіремін.",
       price_title: "Қызметтер мен бағалар",
       price_eyebrow: "Баға тізімі",
-      price_1_name: "Трихоскоппен диагностика + консультация",
-      price_1_desc: "<span class='emoji'>🔍</span>Трихоскопия — арнайы жабдық көмегімен бас терісі мен шаштың жағдайын диагностикалау.",
-      price_2_name: "Лазерлік дулыға",
-      price_2_desc: "<span class='emoji'>🔴</span>Бас терісіне төмен қарқынды лазермен әсер етіп, шаш фолликулаларын ынталандырады.",
-      price_2_time: "20 минут",
-      price_3_name: "Массаждық дулыға",
-      price_3_desc: "<span class='emoji'>💆‍♀️</span>Бас терісінің қан айналымын жақсартады, релаксация береді және күтім процедураларының әсерін күшейтеді.",
-      price_3_time: "15 минут",
-      price_4_name: "Озонотерапия",
-      price_4_desc: "<span class='emoji'>💨</span>Бас терісінің микроциркуляциясын жақсартып, шаш денсаулығына қолайлы жағдай жасайды.",
-      price_4_time: "40 минут",
-      price_5_name: "Фототерапия",
-      price_5_desc: "<span class='emoji'>💡</span>Псориазда бас терісіне жарық толқындарымен әсер ету — қабынуды, қышуды және қабыршақтануды басады.",
-      price_6_name: "Трихологиялық пилинг",
-      price_6_desc: "3 қадамнан тұратын жүйе: пилинг / эмульсия / маска. Бір рет — профилактика үшін, курспен — патология болған жағдайда.",
-      price_6_time: "1 сағат",
-      price_note: "Нақты бағдарлама мен процедуралар саны трихоскоппен диагностикадан кейін анықталады.",
-      photo_title: "Бас терісінің псориазындағы фототерапия",
-      photo_text: "Терінің зақымдалған аймақтарына белгілі бір ұзындықтағы жарық толқындарымен әсер ету әдісі. Қабынуды, қышуды және қабыршақтануды азайтуға көмектеседі, ремиссия кезеңін ұзартады. Жақсы нәтиже үшін кешенді күтім құрамында және жеке жоспар бойынша ұсынылады.",
-      photo_check_1: "Қызаруды және қабынуды азайтады",
-      photo_check_2: "Қышу мен жайсыздықты төмендетеді",
-      photo_check_3: "Қабыршақтануды азайтады",
-      photo_check_4: "Терінің қалпына келуін қолдайды",
+      old_1_name: "Трихоскоппен диагностика + консультация",
+      old_1_desc: "Трихоскопия — арнайы жабдық көмегімен бас терісі мен шаштың жағдайын диагностикалау.",
+      old_2_name: "Трихологиялық пилинг",
+      old_2_desc: "3 қадамнан тұратын жүйе: пилинг / эмульсия / маска. Бір рет — профилактика үшін, курспен — патология болған жағдайда.",
+      old_2_time: "1 сағат",
+      old_3_name: "Озонотерапия",
+      old_3_desc: "Бас терісінің микроциркуляциясын жақсартып, шаш денсаулығына қолайлы жағдай жасайды.",
+      old_3_time: "40 минут",
+      old_4_name: "Массаждық дулыға",
+      old_4_desc: "Бас терісінің қан айналымын жақсартады, релаксация береді және күтім процедураларының әсерін күшейтеді.",
+      old_4_time: "15 минут",
+      old_5_name: "Лазерлік дулыға",
+      old_5_desc: "Бас терісіне төмен қарқынды лазермен әсер етіп, шаш фолликулаларын ынталандырады.",
+      old_5_time: "20 минут",
+      old_6_name: "Фототерапия",
+      old_6_desc: "Псориазда бас терісіне жарық толқындарымен әсер ету — қабынуды, қышуды және қабыршақтануды басады.",
+      old_price_note: "Нақты бағдарлама мен процедуралар саны трихоскоппен диагностикадан кейін анықталады.",
+      price_new_title: "Бағдарлама қызметтерінің құны",
+      price_new_lead: "Жүйелі эстетикалық трихология қызметтері — диагностика, Head SPA және аппараттық күтім.",
+      price_1_name: "Трихоскопиялық диагностика + консультация",
+      price_lllt_name: "LLLT лазер",
+      price_multi_name: "Көпфункционалды аппараттық күтім",
+      price_sum: "Head SPA + LLLT + Озон + Көпфункционалды аппараттың жеке есептелген жалпы құны: 67 000 ₸",
+      complex_title: "Кешенді бағдарлама",
+      complex_eyebrow: "Арнайы баға",
+      complex_lead: "Бірнеше технологияны бір жүйелі бағдарламаға біріктірген кезде арнайы кешенді баға қарастырылады.",
+      complex_name: "Толық трихологиялық кешен",
+      complex_i2: "LLLT лазер",
+      complex_i3: "Озон",
+      complex_i4: "Көпфункционалды аппарат",
+      complex_note: "Кешеннің нақты құрамы диагностика нәтижесіне қарай өзгеруі мүмкін.",
+      complex_old: "Жеке құны: 67 000 ₸",
+      complex_save: "Үнем — 12 000 ₸",
+      packs_title: "Абонементтік бағдарламалар",
+      packs_eyebrow: "Курстар",
+      pack_1_title: "4 кешен",
+      pack_1_old: "Жеке бағамен: 268 000 ₸",
+      pack_1_per: "1 кешен — 50 000 ₸",
+      pack_2_title: "8 кешен",
+      pack_2_old: "Жеке бағамен: 536 000 ₸",
+      pack_2_per: "1 кешен — 47 500 ₸",
+      pack_3_title: "10 кешен",
+      pack_3_old: "Жеке бағамен: 670 000 ₸",
+      pack_3_per: "1 кешен — 45 000 ₸",
+      pack_best: "Ең тиімді формат",
+      packs_note: "Курс көлемі автоматты түрде тағайындалмайды. Қажетті процедуралар саны мен олардың комбинациясы трихоскопиялық диагностикадан кейін жеке анықталады.",
+      why_title: "Неліктен біз?",
+      why_eyebrow: "Тәсіл",
+      why_1_title: "Диагностикаға негізделген тәсіл",
+      why_1_text: "Барлығына бірдей процедура емес. Әр клиентке жеке бағдарлама.",
+      why_2_title: "Заманауи аппараттар",
+      why_2_text: "Бір орталықта бірнеше аппараттық технология.",
+      why_3_title: "Жүйелі күтім",
+      why_3_text: "Бір реттік процедурадан гөрі курстық және бақылаулы тәсілге басымдық береміз.",
+      why_4_title: "Инъекциясыз. Гормонсыз.",
+      why_4_text: "Эстетикалық трихология және аппараттық күтім.",
+      howto_title: "Қалай бастауға болады?",
+      howto_eyebrow: "5 қадам",
+      howto_1: "Диагностикаға жазыласыз",
+      howto_2: "Трихоскопиялық бағалаудан өтесіз",
+      howto_3: "Жеке бағдарлама құрылады",
+      howto_4: "Кешенді күтім курсы басталады",
+      howto_5: "Динамика бақылауда бағаланады",
+      visit_eyebrow: "Сізді күтеміз",
+      visit_title: "Инновациялық эстетикалық трихология орталығы",
+      visit_addr: "Ақтау қаласы, 41-шағын аудан, 21-үй<br>ЖК «Manhattan», 1-қабат",
+      visit_enter: "Кіру — үйдің артқы жағынан, аллея жақтан.",
+      visit_hours: "Жұмыс уақыты: күн сайын 09:00–18:00",
+      visit_tag_3: "Жеке бағдарлама",
+      visit_tag_4: "Жүйелі күтім",
+      visit_aside_eyebrow: "Алғашқы қадам",
+      visit_aside_title: "Трихоскопиялық диагностика",
       reviews_eyebrow: "Клиенттер пікірлері",
       reviews_title: "Курстан өткендер не дейді",
       reviews_text: "Клиенттермен нақты хат алмасу — күтімге дейін және кейін.",
@@ -1362,10 +2033,11 @@
       faq_2_a: "Алғашқы жақсарулар (шаш түсуінің азаюы, қышу мен жайсыздықтың кетуі) бір айдан кейін көрінеді — бұл кепілдендірілген. Соңғы нәтижелер әркімде әртүрлі: біреуде бір ай, біреуде жарты жыл немесе бір жыл кетеді. Біз гормон қолданбаймыз, сондықтан уақыт пен сабыр қажет.",
       faq_3_q: "АГА (андрогендік алопеция) тоқтатуға бола ма?",
       faq_3_a: "АГА — үкім емес. Шаш түсуін тоқтатып, қалпына келтіруге болады, бірақ тәсіл кешенді, жүйелі және ұзақ болуы керек. Бұл тіс тазалау сияқты сіздің күнделікті рәсіміңізге айналуы тиіс. Курс барысында мен сізге кеңес беріп, қолдау көрсету үшін әрдайым байланыста боламын.",
-      footer_desc: "Трихолог-эстетист. Шаш пен бас терісінің диагностикасы және қалпына келтіру.",
+      footer_desc: "Инновациялық эстетикалық трихология орталығы. Шаш пен бас терісіне аппараттық күтім.",
       footer_contact: "Байланыс",
       footer_call: "Қоңырау шалу",
       footer_nav: "Навигация",
+      footer_address_short: "Ақтау, 41 ш/а, 21-үй",
       footer_disclaimer: "Медициналық қызмет емес",
       q1_title: "Сізді ең көп нені мазалайды?",
       q1_o1: "Шаш түсуі",
